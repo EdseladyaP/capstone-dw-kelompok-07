@@ -6,6 +6,18 @@ dan catat asal tiap baris (`_berkas_raw` relatif data/raw/, `_sha256_raw` dari s
 """
 
 
+"""def jalankan():
+    Kembalikan {nama_sumber: DataFrame mentah}.
+    raise NotImplementedError("Tahap 1: tulis pembaca untuk tiap format di data/raw/")"""
+
+
+"""Tahap 1 — Ekstraksi. Milik tim."""
+
+from src.ekstraksi import wdi, bps
+
 def jalankan():
-    """Kembalikan {nama_sumber: DataFrame mentah}."""
-    raise NotImplementedError("Tahap 1: tulis pembaca untuk tiap format di data/raw/")
+    """Mengembalikan kamus data DataFrame mentah dari semua sumber."""
+    hasil = {}
+    hasil.update(wdi.jalankan())
+    hasil.update(bps.jalankan())
+    return hasil
