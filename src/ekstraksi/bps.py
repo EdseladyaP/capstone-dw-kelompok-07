@@ -1,5 +1,4 @@
-import json
-import re
+﻿import json
 from pathlib import Path
 import pandas as pd
 from src.common.manifest import sha256_raw
@@ -22,21 +21,15 @@ def _deteksi_seri_bps(nama_file: str) -> str:
     return "lainnya"
 
 
+def _adalah_provinsi_atau_nasional(wilayah_id: str) -> bool:
+    wid = str(wilayah_id).strip()
+    return wid.endswith("00") or wid in {"9999", "0"}
+
+
 def _saring_hls_csv(df: pd.DataFrame, rel_path: str) -> pd.DataFrame:
-    """Saring sdg4_hls ke tingkat provinsi & nasional, keluarkan kabupaten/kota."""
     awal = len(df)
-    # Cari kolom teks wilayah (umumnya kolom pertama atau yang memuat 'provinsi'/'wilayah'/'vervar')
-    kandidat_kolom = [
-        c for c in df.columns
-        if any(k in c.lower() for k in ("wilayah", "provinsi", "vervar", "daerah", "nama"))
-    ]
-    kol_wilayah = kandidat_kolom[0] if kandidat_kolom else df.columns[0]
-
-    # Baris kabupaten/kota di BPS diawali "Kab." atau "Kota " (atau kode BPS 4 digit)
-    teks_wilayah = df[kol_wilayah].astype(str).str.strip()
-    mask_kabkota = teks_wilayah.str.match(r"^(kab\.|kota\s)", case=False, na=False)
-
-    df_hasil = df[~mask_kabkota].copy()
+    mask_simpan = df["wilayah_id"].apply(_adalah_provinsi_atau_nasional)
+    df_hasil = df[mask_simpan].copy()
     dikeluarkan = awal - len(df_hasil)
     print(
         f"[HLS FILTER] {rel_path}: {dikeluarkan} baris kabupaten/kota dikeluarkan "
@@ -45,11 +38,65 @@ def _saring_hls_csv(df: pd.DataFrame, rel_path: str) -> pd.DataFrame:
     return df_hasil
 
 
+def _urai_json_bps(data, rel_path: str, is_hls: bool) -> pd.DataFrame:
+    payload = None
+    if isinstance(data, dict):
+        payload = data
+    elif isinstance(data, list):
+        for elem in data:
+            if isinstance(elem, dict) and "datacontent" in elem:
+                payload = elem
+                break
+
+    if payload and "datacontent" in payload:
+        vervar_list = payload.get("vervar", [])
+        vervar_sorted = sorted(vervar_list, key=lambda v: len(str(v["val"])), reverse=True)
+        vervar_map = {str(v["val"]): str(v["label"]) for v in vervar_sorted}
+
+        turvar_map = {str(v["val"]): str(v["label"]) for v in payload.get("turvar", [])}
+        tahun_map = {str(v["val"]): str(v["label"]) for v in payload.get("tahun", [])}
+        turtahun_map = {str(v["val"]): str(v["label"]) for v in payload.get("turtahun", [])}
+        var_info = payload.get("var", [{}])[0] if isinstance(payload.get("var"), list) and payload.get("var") else {}
+        var_id = str(var_info.get("val", ""))
+
+        rows = []
+        dikeluarkan = 0
+
+        for kode_komposit, nilai in payload["datacontent"].items():
+            kode_str = str(kode_komposit)
+            wilayah_id = next((vid for vid in vervar_map if kode_str.startswith(vid)), "")
+
+            if is_hls and not _adalah_provinsi_atau_nasional(wilayah_id):
+                dikeluarkan += 1
+                continue
+
+            rows.append({
+                "kode_komposit": kode_str,
+                "var_id": var_id,
+                "var_label": var_info.get("label", ""),
+                "wilayah_id": wilayah_id,
+                "wilayah": vervar_map.get(wilayah_id, ""),
+                "turvar_opsi": json.dumps(turvar_map, ensure_ascii=False),
+                "tahun_opsi": json.dumps(tahun_map, ensure_ascii=False),
+                "periode_opsi": json.dumps(turtahun_map, ensure_ascii=False),
+                "nilai": nilai,
+                "satuan": var_info.get("unit", ""),
+            })
+
+        if is_hls:
+            total_awal = len(rows) + dikeluarkan
+            print(
+                f"[HLS FILTER] {rel_path}: {dikeluarkan} baris kabupaten/kota dikeluarkan "
+                f"(tersisa {len(rows)} dari {total_awal} baris)."
+            )
+
+        return pd.DataFrame(rows)
+
+    items = data if isinstance(data, list) else [data]
+    return pd.json_normalize(items)
+
+
 def jalankan() -> dict:
-    """
-    Membaca seluruh 11 berkas BPS (CSV, JSON data, dan manifest_asal.json) untuk Kasus 7,
-    menyaring wilayah HLS ke provinsi & nasional, dan mempertahankan kolom asal.
-    """
     raw_dir = Path("data/raw/bps")
     hasil = {}
 
@@ -64,7 +111,6 @@ def jalankan() -> dict:
         if file_path.suffix == ".csv":
             df_csv = pd.read_csv(file_path)
 
-            # Catatan khusus kasus 7: saring berkas harapan lama sekolah (sdg4_hls)
             if "hls" in file_path.name.lower():
                 df_csv = _saring_hls_csv(df_csv, rel_path)
 
@@ -78,53 +124,7 @@ def jalankan() -> dict:
             with open(file_path, "r", encoding="utf-8") as f:
                 data = json.load(f)
 
-            # Jika JSON format BPS WebAPI (memiliki key 'datacontent' & 'vervar')
-            if isinstance(data, dict) and "datacontent" in data and "vervar" in data:
-                vervar_map = {str(v["val"]): str(v["label"]) for v in data.get("vervar", [])}
-                turvar_map = {str(v["val"]): str(v["label"]) for v in data.get("turvar", [])}
-                tahun_map = {str(v["val"]): str(v["label"]) for v in data.get("tahun", [])}
-                turtahun_map = {str(v["val"]): str(v["label"]) for v in data.get("turtahun", [])}
-                var_info = data.get("var", [{}])[0] if isinstance(data.get("var"), list) else {}
-
-                rows = []
-                dikeluarkan_json = 0
-                is_hls = "hls" in file_path.name.lower()
-
-                for kode_komposit, nilai in data["datacontent"].items():
-                    # Cocokkan kode vervar (wilayah) di awal kode komposit BPS
-                    vervar_id = next((vid for vid in vervar_map if str(kode_komposit).startswith(vid)), "")
-                    wilayah_label = vervar_map.get(vervar_id, "")
-
-                    # Saring kabupaten/kota khusus sdg4_hls.json
-                    if is_hls and re.match(r"^(kab\.|kota\s)", wilayah_label.strip(), flags=re.IGNORECASE):
-                        dikeluarkan_json += 1
-                        continue
-
-                    rows.append({
-                        "kode_komposit": kode_komposit,
-                        "vervar_id": vervar_id,
-                        "vervar": wilayah_label,
-                        "var_label": var_info.get("label", ""),
-                        "unit": var_info.get("unit", ""),
-                        "turvar_map": json.dumps(turvar_map, ensure_ascii=False),
-                        "tahun_map": json.dumps(tahun_map, ensure_ascii=False),
-                        "turtahun_map": json.dumps(turtahun_map, ensure_ascii=False),
-                        "nilai": nilai,
-                    })
-
-                if is_hls:
-                    total_awal_json = len(rows) + dikeluarkan_json
-                    print(
-                        f"[HLS FILTER] {rel_path}: {dikeluarkan_json} baris kabupaten/kota dikeluarkan "
-                        f"(tersisa {len(rows)} dari {total_awal_json} baris)."
-                    )
-
-                df_json = pd.DataFrame(rows)
-            else:
-                # Untuk manifest_asal.json atau JSON struktur datar/list
-                items = data if isinstance(data, list) else [data]
-                df_json = pd.json_normalize(items)
-
+            df_json = _urai_json_bps(data, rel_path, is_hls=("hls" in file_path.name.lower()))
             df_json["sumber"] = "bps"
             df_json["seri_kode"] = seri_kode
             df_json["_berkas_raw"] = rel_path
