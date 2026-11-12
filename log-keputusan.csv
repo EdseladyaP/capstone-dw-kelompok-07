@@ -1,4 +1,2 @@
 id,tanggal,nim,tahap,seri_kode,keputusan,alternatif_ditolak,alasan,dampak_baris
-K-001,2026-11-03,124450059,silver,var543,"periode bulanan Februari/Agustus disimpan sebagai jenis_periode=bulan","rata-rata ke tahunan","sumber menerbitkan dua kali setahun; agregasi dilakukan di Gold",0
-K-002,2026-11-08,124450059,silver,pemetaan_wilayah_38_provinsi_2025,"Menggunakan susunan 38 provinsi Indonesia tahun 2025 sebagai referensi baku pemetaan wilayah dalam integrasi data","Menggunakan susunan 34 provinsi lama atau mencocokkan nama wilayah tanpa referensi baku","Referensi 38 provinsi tahun 2025 digunakan untuk menjaga konsistensi identitas wilayah antar sumber data. Perbedaan nama dan wilayah historis perlu diperiksa sebelum pemetaan dilakukan",0
-  
+K-001,2026-11-03,12345678,silver,var543,"periode bulanan Februari/Agustus disimpan sebagai jenis_periode=bulan","rata-rata ke tahunan","sumber menerbitkan dua kali setahun; agregasi dilakukan di Gold",0
