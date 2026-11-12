@@ -1,2 +1,3 @@
 id,tanggal,nim,tahap,seri_kode,keputusan,alternatif_ditolak,alasan,dampak_baris
 K-001,2026-11-03,12345678,silver,var543,"periode bulanan Februari/Agustus disimpan sebagai jenis_periode=bulan","rata-rata ke tahunan","sumber menerbitkan dua kali setahun; agregasi dilakukan di Gold",0
+K-002,2026-11-12,124450095,ekstraksi,var417,"Menyaring berkas harapan lama sekolah (sdg4_hls.csv dan json/sdg4_hls.json) hanya ke tingkat provinsi (wilayah_id berakhiran 00) dan nasional (wilayah_id 9999)","Menyimpan seluruh rincian kabupaten/kota bersama provinsi","Panel analisis berada pada tingkat provinsi dengan pembanding nasional sehingga baris kabupaten/kota dikeluarkan agar tidak bercampur dengan provinsi",-9655
