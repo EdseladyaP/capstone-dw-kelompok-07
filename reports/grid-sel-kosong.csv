@@ -1,0 +1,455 @@
+seri_kode,periode,wilayah_kode,nama_wilayah,tingkat,kategori,bukti
+var303 [jenjang=sd],2003,2100,Kepulauan Riau,provinsi,batas_lama,Riau masih diterbitkan dengan batas lama pada 2003; angka tidak dipecah
+var303 [jenjang=sd],2003,6500,Kalimantan Utara,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2013
+var303 [jenjang=sd],2003,7600,Sulawesi Barat,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2005
+var303 [jenjang=sd],2003,9100,Papua Barat,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2004
+var303 [jenjang=sd],2003,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2003,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2003,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2003,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2004,2100,Kepulauan Riau,provinsi,batas_lama,Riau masih diterbitkan dengan batas lama pada 2004; angka tidak dipecah
+var303 [jenjang=sd],2004,6500,Kalimantan Utara,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2013
+var303 [jenjang=sd],2004,7600,Sulawesi Barat,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2005
+var303 [jenjang=sd],2004,9100,Papua Barat,provinsi,batas_lama,Papua masih diterbitkan dengan batas lama pada 2004; angka tidak dipecah
+var303 [jenjang=sd],2004,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2004,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2004,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2004,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2005,1100,Aceh,provinsi,missing,provinsi sudah ada dan penerbit tidak menyatakan angka itu tidak ada
+var303 [jenjang=sd],2005,6500,Kalimantan Utara,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2013
+var303 [jenjang=sd],2005,7600,Sulawesi Barat,provinsi,batas_lama,Sulawesi Selatan masih diterbitkan dengan batas lama pada 2005; angka tidak dipecah
+var303 [jenjang=sd],2005,9100,Papua Barat,provinsi,batas_lama,Papua masih diterbitkan dengan batas lama pada 2005; angka tidak dipecah
+var303 [jenjang=sd],2005,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2005,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2005,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2005,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2006,6500,Kalimantan Utara,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2013
+var303 [jenjang=sd],2006,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2006,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2006,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2006,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2007,6500,Kalimantan Utara,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2013
+var303 [jenjang=sd],2007,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2007,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2007,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2007,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2008,6500,Kalimantan Utara,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2013
+var303 [jenjang=sd],2008,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2008,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2008,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2008,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2009,6500,Kalimantan Utara,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2013
+var303 [jenjang=sd],2009,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2009,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2009,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2009,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2010,6500,Kalimantan Utara,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2013
+var303 [jenjang=sd],2010,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2010,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2010,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2010,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2011,6500,Kalimantan Utara,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2013
+var303 [jenjang=sd],2011,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2011,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2011,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2011,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2012,6500,Kalimantan Utara,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2013
+var303 [jenjang=sd],2012,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2012,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2012,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2012,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2013,6500,Kalimantan Utara,provinsi,batas_lama,Kalimantan Timur masih diterbitkan dengan batas lama pada 2013; angka tidak dipecah
+var303 [jenjang=sd],2013,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2013,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2013,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2013,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2014,6500,Kalimantan Utara,provinsi,batas_lama,Kalimantan Timur masih diterbitkan dengan batas lama pada 2014; angka tidak dipecah
+var303 [jenjang=sd],2014,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2014,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2014,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2014,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2015,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2015,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2015,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2015,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2016,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2016,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2016,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2016,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2017,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2017,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2017,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2017,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2018,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2018,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2018,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2018,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2019,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2019,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2019,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2019,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2020,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2020,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2020,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2020,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2021,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2021,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2021,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2021,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2022,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2022,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2022,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2022,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sd],2023,9200,Papua Barat Daya,provinsi,batas_lama,Papua Barat masih diterbitkan dengan batas lama pada 2023; angka tidak dipecah
+var303 [jenjang=sd],2023,9500,Papua Selatan,provinsi,batas_lama,Papua masih diterbitkan dengan batas lama pada 2023; angka tidak dipecah
+var303 [jenjang=sd],2023,9600,Papua Tengah,provinsi,batas_lama,Papua masih diterbitkan dengan batas lama pada 2023; angka tidak dipecah
+var303 [jenjang=sd],2023,9700,Papua Pegunungan,provinsi,batas_lama,Papua masih diterbitkan dengan batas lama pada 2023; angka tidak dipecah
+var303 [jenjang=smp],2003,2100,Kepulauan Riau,provinsi,batas_lama,Riau masih diterbitkan dengan batas lama pada 2003; angka tidak dipecah
+var303 [jenjang=smp],2003,6500,Kalimantan Utara,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2013
+var303 [jenjang=smp],2003,7600,Sulawesi Barat,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2005
+var303 [jenjang=smp],2003,9100,Papua Barat,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2004
+var303 [jenjang=smp],2003,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2003,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2003,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2003,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2004,2100,Kepulauan Riau,provinsi,batas_lama,Riau masih diterbitkan dengan batas lama pada 2004; angka tidak dipecah
+var303 [jenjang=smp],2004,6500,Kalimantan Utara,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2013
+var303 [jenjang=smp],2004,7600,Sulawesi Barat,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2005
+var303 [jenjang=smp],2004,9100,Papua Barat,provinsi,batas_lama,Papua masih diterbitkan dengan batas lama pada 2004; angka tidak dipecah
+var303 [jenjang=smp],2004,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2004,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2004,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2004,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2005,1100,Aceh,provinsi,missing,provinsi sudah ada dan penerbit tidak menyatakan angka itu tidak ada
+var303 [jenjang=smp],2005,6500,Kalimantan Utara,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2013
+var303 [jenjang=smp],2005,7600,Sulawesi Barat,provinsi,batas_lama,Sulawesi Selatan masih diterbitkan dengan batas lama pada 2005; angka tidak dipecah
+var303 [jenjang=smp],2005,9100,Papua Barat,provinsi,batas_lama,Papua masih diterbitkan dengan batas lama pada 2005; angka tidak dipecah
+var303 [jenjang=smp],2005,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2005,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2005,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2005,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2006,6500,Kalimantan Utara,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2013
+var303 [jenjang=smp],2006,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2006,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2006,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2006,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2007,6500,Kalimantan Utara,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2013
+var303 [jenjang=smp],2007,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2007,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2007,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2007,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2008,6500,Kalimantan Utara,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2013
+var303 [jenjang=smp],2008,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2008,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2008,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2008,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2009,6500,Kalimantan Utara,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2013
+var303 [jenjang=smp],2009,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2009,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2009,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2009,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2010,6500,Kalimantan Utara,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2013
+var303 [jenjang=smp],2010,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2010,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2010,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2010,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2011,6500,Kalimantan Utara,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2013
+var303 [jenjang=smp],2011,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2011,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2011,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2011,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2012,6500,Kalimantan Utara,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2013
+var303 [jenjang=smp],2012,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2012,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2012,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2012,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2013,6500,Kalimantan Utara,provinsi,batas_lama,Kalimantan Timur masih diterbitkan dengan batas lama pada 2013; angka tidak dipecah
+var303 [jenjang=smp],2013,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2013,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2013,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2013,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2014,6500,Kalimantan Utara,provinsi,batas_lama,Kalimantan Timur masih diterbitkan dengan batas lama pada 2014; angka tidak dipecah
+var303 [jenjang=smp],2014,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2014,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2014,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2014,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2015,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2015,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2015,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2015,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2016,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2016,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2016,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2016,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2017,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2017,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2017,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2017,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2018,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2018,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2018,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2018,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2019,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2019,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2019,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2019,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2020,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2020,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2020,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2020,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2021,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2021,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2021,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2021,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2022,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2022,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2022,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2022,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=smp],2023,9200,Papua Barat Daya,provinsi,batas_lama,Papua Barat masih diterbitkan dengan batas lama pada 2023; angka tidak dipecah
+var303 [jenjang=smp],2023,9500,Papua Selatan,provinsi,batas_lama,Papua masih diterbitkan dengan batas lama pada 2023; angka tidak dipecah
+var303 [jenjang=smp],2023,9600,Papua Tengah,provinsi,batas_lama,Papua masih diterbitkan dengan batas lama pada 2023; angka tidak dipecah
+var303 [jenjang=smp],2023,9700,Papua Pegunungan,provinsi,batas_lama,Papua masih diterbitkan dengan batas lama pada 2023; angka tidak dipecah
+var303 [jenjang=sm],2003,2100,Kepulauan Riau,provinsi,batas_lama,Riau masih diterbitkan dengan batas lama pada 2003; angka tidak dipecah
+var303 [jenjang=sm],2003,6500,Kalimantan Utara,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2013
+var303 [jenjang=sm],2003,7600,Sulawesi Barat,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2005
+var303 [jenjang=sm],2003,9100,Papua Barat,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2004
+var303 [jenjang=sm],2003,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2003,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2003,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2003,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2004,2100,Kepulauan Riau,provinsi,batas_lama,Riau masih diterbitkan dengan batas lama pada 2004; angka tidak dipecah
+var303 [jenjang=sm],2004,6500,Kalimantan Utara,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2013
+var303 [jenjang=sm],2004,7600,Sulawesi Barat,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2005
+var303 [jenjang=sm],2004,9100,Papua Barat,provinsi,batas_lama,Papua masih diterbitkan dengan batas lama pada 2004; angka tidak dipecah
+var303 [jenjang=sm],2004,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2004,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2004,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2004,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2005,1100,Aceh,provinsi,missing,provinsi sudah ada dan penerbit tidak menyatakan angka itu tidak ada
+var303 [jenjang=sm],2005,6500,Kalimantan Utara,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2013
+var303 [jenjang=sm],2005,7600,Sulawesi Barat,provinsi,batas_lama,Sulawesi Selatan masih diterbitkan dengan batas lama pada 2005; angka tidak dipecah
+var303 [jenjang=sm],2005,9100,Papua Barat,provinsi,batas_lama,Papua masih diterbitkan dengan batas lama pada 2005; angka tidak dipecah
+var303 [jenjang=sm],2005,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2005,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2005,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2005,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2006,6500,Kalimantan Utara,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2013
+var303 [jenjang=sm],2006,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2006,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2006,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2006,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2007,6500,Kalimantan Utara,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2013
+var303 [jenjang=sm],2007,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2007,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2007,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2007,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2008,6500,Kalimantan Utara,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2013
+var303 [jenjang=sm],2008,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2008,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2008,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2008,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2009,6500,Kalimantan Utara,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2013
+var303 [jenjang=sm],2009,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2009,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2009,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2009,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2010,6500,Kalimantan Utara,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2013
+var303 [jenjang=sm],2010,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2010,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2010,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2010,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2011,6500,Kalimantan Utara,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2013
+var303 [jenjang=sm],2011,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2011,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2011,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2011,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2012,6500,Kalimantan Utara,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2013
+var303 [jenjang=sm],2012,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2012,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2012,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2012,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2013,6500,Kalimantan Utara,provinsi,batas_lama,Kalimantan Timur masih diterbitkan dengan batas lama pada 2013; angka tidak dipecah
+var303 [jenjang=sm],2013,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2013,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2013,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2013,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2014,6500,Kalimantan Utara,provinsi,batas_lama,Kalimantan Timur masih diterbitkan dengan batas lama pada 2014; angka tidak dipecah
+var303 [jenjang=sm],2014,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2014,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2014,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2014,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2015,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2015,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2015,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2015,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2016,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2016,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2016,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2016,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2017,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2017,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2017,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2017,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2018,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2018,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2018,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2018,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2019,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2019,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2019,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2019,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2020,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2020,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2020,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2020,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2021,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2021,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2021,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2021,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2022,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2022,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2022,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2022,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var303 [jenjang=sm],2023,9200,Papua Barat Daya,provinsi,batas_lama,Papua Barat masih diterbitkan dengan batas lama pada 2023; angka tidak dipecah
+var303 [jenjang=sm],2023,9500,Papua Selatan,provinsi,batas_lama,Papua masih diterbitkan dengan batas lama pada 2023; angka tidak dipecah
+var303 [jenjang=sm],2023,9600,Papua Tengah,provinsi,batas_lama,Papua masih diterbitkan dengan batas lama pada 2023; angka tidak dipecah
+var303 [jenjang=sm],2023,9700,Papua Pegunungan,provinsi,batas_lama,Papua masih diterbitkan dengan batas lama pada 2023; angka tidak dipecah
+var1443,2015,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1443,2015,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1443,2015,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1443,2015,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1443,2016,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1443,2016,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1443,2016,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1443,2016,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1443,2017,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1443,2017,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1443,2017,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1443,2017,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1443,2018,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1443,2018,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1443,2018,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1443,2018,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1443,2019,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1443,2019,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1443,2019,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1443,2019,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1443,2020,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1443,2020,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1443,2020,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1443,2020,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1443,2021,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1443,2021,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1443,2021,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1443,2021,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1443,2022,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1443,2022,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1443,2022,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1443,2022,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1443,2023,9200,Papua Barat Daya,provinsi,batas_lama,Papua Barat masih diterbitkan dengan batas lama pada 2023; angka tidak dipecah
+var1443,2023,9500,Papua Selatan,provinsi,batas_lama,Papua masih diterbitkan dengan batas lama pada 2023; angka tidak dipecah
+var1443,2023,9600,Papua Tengah,provinsi,batas_lama,Papua masih diterbitkan dengan batas lama pada 2023; angka tidak dipecah
+var1443,2023,9700,Papua Pegunungan,provinsi,batas_lama,Papua masih diterbitkan dengan batas lama pada 2023; angka tidak dipecah
+var2685 [umur=15-64],2022,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var2685 [umur=15-64],2022,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var2685 [umur=15-64],2022,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var2685 [umur=15-64],2022,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var2685 [umur=15-64],2023,9200,Papua Barat Daya,provinsi,batas_lama,Papua Barat masih diterbitkan dengan batas lama pada 2023; angka tidak dipecah
+var2685 [umur=15-64],2023,9500,Papua Selatan,provinsi,batas_lama,Papua masih diterbitkan dengan batas lama pada 2023; angka tidak dipecah
+var2685 [umur=15-64],2023,9600,Papua Tengah,provinsi,batas_lama,Papua masih diterbitkan dengan batas lama pada 2023; angka tidak dipecah
+var2685 [umur=15-64],2023,9700,Papua Pegunungan,provinsi,batas_lama,Papua masih diterbitkan dengan batas lama pada 2023; angka tidak dipecah
+var417,2010,6500,Kalimantan Utara,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2013
+var417,2010,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var417,2010,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var417,2010,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var417,2010,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var417,2011,6500,Kalimantan Utara,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2013
+var417,2011,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var417,2011,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var417,2011,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var417,2011,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var417,2012,6500,Kalimantan Utara,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2013
+var417,2012,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var417,2012,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var417,2012,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var417,2012,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var417,2013,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var417,2013,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var417,2013,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var417,2013,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var417,2014,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var417,2014,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var417,2014,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var417,2014,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var417,2015,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var417,2015,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var417,2015,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var417,2015,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var417,2016,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var417,2016,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var417,2016,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var417,2016,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var417,2017,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var417,2017,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var417,2017,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var417,2017,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var417,2018,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var417,2018,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var417,2018,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var417,2018,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var417,2019,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var417,2019,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var417,2019,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var417,2019,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var417,2020,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var417,2020,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var417,2020,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var417,2020,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var417,2021,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var417,2021,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var417,2021,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var417,2021,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var417,2022,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var417,2022,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var417,2022,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var417,2022,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var417,2023,9200,Papua Barat Daya,provinsi,batas_lama,Papua Barat masih diterbitkan dengan batas lama pada 2023; angka tidak dipecah
+var417,2023,9500,Papua Selatan,provinsi,batas_lama,Papua masih diterbitkan dengan batas lama pada 2023; angka tidak dipecah
+var417,2023,9600,Papua Tengah,provinsi,batas_lama,Papua masih diterbitkan dengan batas lama pada 2023; angka tidak dipecah
+var417,2023,9700,Papua Pegunungan,provinsi,batas_lama,Papua masih diterbitkan dengan batas lama pada 2023; angka tidak dipecah
+var1429,2015,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1429,2015,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1429,2015,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1429,2015,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1429,2016,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1429,2016,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1429,2016,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1429,2016,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1429,2017,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1429,2017,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1429,2017,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1429,2017,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1429,2018,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1429,2018,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1429,2018,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1429,2018,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1429,2019,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1429,2019,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1429,2019,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1429,2019,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1429,2020,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1429,2020,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1429,2020,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1429,2020,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1429,2021,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1429,2021,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1429,2021,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1429,2021,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1429,2022,9200,Papua Barat Daya,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1429,2022,9500,Papua Selatan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1429,2022,9600,Papua Tengah,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1429,2022,9700,Papua Pegunungan,provinsi,belum_ada,provinsi dibentuk; data penuh mulai 2023
+var1429,2023,9200,Papua Barat Daya,provinsi,batas_lama,Papua Barat masih diterbitkan dengan batas lama pada 2023; angka tidak dipecah
+var1429,2023,9500,Papua Selatan,provinsi,batas_lama,Papua masih diterbitkan dengan batas lama pada 2023; angka tidak dipecah
+var1429,2023,9600,Papua Tengah,provinsi,batas_lama,Papua masih diterbitkan dengan batas lama pada 2023; angka tidak dipecah
+var1429,2023,9700,Papua Pegunungan,provinsi,batas_lama,Papua masih diterbitkan dengan batas lama pada 2023; angka tidak dipecah
