@@ -1,0 +1,7 @@
+sumber,seri_kode,nama_seri,kode_sdg,satuan,periode_awal,periode_akhir,catatan_sumber
+bps,var303,Angka Partisipasi Kasar (APK) Menurut Provinsi dan Jenjang Pendidikan,4.3.1.(a),Persen,2003,2025,"Pemetaan khusus rincian SM; SD dan SMP tidak dipetakan; keputusan K-011"
+bps,var1443,Angka Partisipasi Kasar (APK) Perguruan Tinggi (PT),4.3.1.(b),Persen,2015,2025,"Proksi nasional indikator 4.3.1.(b)"
+bps,var2685,Tingkat Partisipasi Remaja dan Dewasa dalam Pendidikan dan Pelatihan Formal dan Non Formal,4.3.1,Persen,2022,2024,"Kode dan satuan tercantum dalam metadata BPS"
+bps,var417,Harapan Lama Sekolah,Belum terpetakan,Tahun,2010,2025,"Satuan Tahun tercantum dalam metadata BPS"
+bps,var1429,Rata-Rata Lama Sekolah Penduduk Umur 15 Tahun ke Atas,Belum terpetakan,Tahun,2015,2025,"Satuan dikoreksi berdasarkan judul indikator"
+wdi,SE.TER.ENRR,School enrollment tertiary (% gross),4.3.2,Persen,1970,2023,"Tahun 1971 memiliki value null; 53 observasi bernilai"
