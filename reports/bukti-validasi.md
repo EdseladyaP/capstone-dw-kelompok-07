@@ -117,7 +117,8 @@ dan memastikan isinya identik dengan HEAD):
 Endpoint capstone sengaja tidak tersedia dari aplikasi/CLI
 (`GET /api/me/capstone` → `403 di_luar_cakupan_aplikasi`, “Buka di Workbench web”).
 Karena itu tombol **Kirim** harus ditekan di Workbench web, lalu resi/tangkapan layarnya
-disimpan di repo ini.
+disimpan di repo ini. Ringkasan sudah diposting ke kartu Papan Tim pada 20 November 2026,
+pukul 20.20 (waktu pada tangkapan layar).
 
 Ringkasan siap tempel di kartu Papan Tim:
 
@@ -133,11 +134,11 @@ data_hash=47a36c7c376bfc28458f66b5b1370271ed253205e4c57fd7c1c748c4849a438e
 commit=f26a951
 ```
 
-Setelah pengiriman, isi bukti berikut:
+Bukti pengiriman:
 
 | Bukti | Isi |
 |---|---|
-| Waktu kirim (WIB) | _belum diisi_ |
+| Waktu kirim (WIB) | 20 November 2026, 20.20 |
 | Nama kartu / ID | Validasi tidak menunggu Sprint 3 |
-| Resi / ID pengiriman | _belum diisi_ |
-| Tangkapan layar | `reports/bukti-papan-tim.png` (simpan berkasnya di sini) |
+| Resi / ID pengiriman | Komentar Papan Tim oleh DIFANYA HUSAKINA; ID resi tidak tampak pada tangkapan layar |
+| Tangkapan layar | `reports/bukti-papan-tim.png` |
