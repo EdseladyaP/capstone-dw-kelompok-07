@@ -1,0 +1,282 @@
+sumber,seri_kode,peran,cakupan_wilayah,dimensi_rincian,rincian,periode,jenis_periode,nilai,tersedia,satuan,berkas_raw
+bps,var1429,utama,Indonesia,tidak ada,Tidak ada,2015,tahun,8.32,1,tahun [kolom satuan kosong; rata-rata lama sekolah dalam tahun],bps/2026-10-17/sdg4_rls.csv
+bps,var1429,utama,Indonesia,tidak ada,Tidak ada,2016,tahun,8.42,1,tahun [kolom satuan kosong; rata-rata lama sekolah dalam tahun],bps/2026-10-17/sdg4_rls.csv
+bps,var1429,utama,Indonesia,tidak ada,Tidak ada,2017,tahun,8.5,1,tahun [kolom satuan kosong; rata-rata lama sekolah dalam tahun],bps/2026-10-17/sdg4_rls.csv
+bps,var1429,utama,Indonesia,tidak ada,Tidak ada,2018,tahun,8.58,1,tahun [kolom satuan kosong; rata-rata lama sekolah dalam tahun],bps/2026-10-17/sdg4_rls.csv
+bps,var1429,utama,Indonesia,tidak ada,Tidak ada,2019,tahun,8.75,1,tahun [kolom satuan kosong; rata-rata lama sekolah dalam tahun],bps/2026-10-17/sdg4_rls.csv
+bps,var1429,utama,Indonesia,tidak ada,Tidak ada,2020,tahun,8.9,1,tahun [kolom satuan kosong; rata-rata lama sekolah dalam tahun],bps/2026-10-17/sdg4_rls.csv
+bps,var1429,utama,Indonesia,tidak ada,Tidak ada,2021,tahun,8.97,1,tahun [kolom satuan kosong; rata-rata lama sekolah dalam tahun],bps/2026-10-17/sdg4_rls.csv
+bps,var1429,utama,Indonesia,tidak ada,Tidak ada,2022,tahun,9.08,1,tahun [kolom satuan kosong; rata-rata lama sekolah dalam tahun],bps/2026-10-17/sdg4_rls.csv
+bps,var1429,utama,Indonesia,tidak ada,Tidak ada,2023,tahun,9.13,1,tahun [kolom satuan kosong; rata-rata lama sekolah dalam tahun],bps/2026-10-17/sdg4_rls.csv
+bps,var1429,utama,Indonesia,tidak ada,Tidak ada,2024,tahun,9.22,1,tahun [kolom satuan kosong; rata-rata lama sekolah dalam tahun],bps/2026-10-17/sdg4_rls.csv
+bps,var1429,utama,Indonesia,tidak ada,Tidak ada,2025,tahun,9.41,1,tahun [kolom satuan kosong; rata-rata lama sekolah dalam tahun],bps/2026-10-17/sdg4_rls.csv
+bps,var1443,utama,Indonesia,tidak ada,Tidak ada,2015,tahun,25.26,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk_pt.csv
+bps,var1443,utama,Indonesia,tidak ada,Tidak ada,2016,tahun,27.98,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk_pt.csv
+bps,var1443,utama,Indonesia,tidak ada,Tidak ada,2017,tahun,29.93,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk_pt.csv
+bps,var1443,utama,Indonesia,tidak ada,Tidak ada,2018,tahun,30.19,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk_pt.csv
+bps,var1443,utama,Indonesia,tidak ada,Tidak ada,2019,tahun,30.28,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk_pt.csv
+bps,var1443,utama,Indonesia,tidak ada,Tidak ada,2020,tahun,30.85,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk_pt.csv
+bps,var1443,utama,Indonesia,tidak ada,Tidak ada,2021,tahun,31.19,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk_pt.csv
+bps,var1443,utama,Indonesia,tidak ada,Tidak ada,2022,tahun,31.16,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk_pt.csv
+bps,var1443,utama,Indonesia,tidak ada,Tidak ada,2023,tahun,31.45,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk_pt.csv
+bps,var1443,utama,Indonesia,tidak ada,Tidak ada,2024,tahun,32.0,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk_pt.csv
+bps,var1443,utama,Indonesia,tidak ada,Tidak ada,2025,tahun,32.89,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk_pt.csv
+bps,var2685,utama,Indonesia,kelompok_umur,Usia 15-24 tahun,2022,tahun,51.67,1,Persen,bps/2026-10-17/sdg4_4_3_1_v2685.csv
+bps,var2685,utama,Indonesia,kelompok_umur,Usia 15-24 tahun,2023,tahun,50.02,1,Persen,bps/2026-10-17/sdg4_4_3_1_v2685.csv
+bps,var2685,utama,Indonesia,kelompok_umur,Usia 15-24 tahun,2024,tahun,52.12,1,Persen,bps/2026-10-17/sdg4_4_3_1_v2685.csv
+bps,var2685,utama,Indonesia,kelompok_umur,Usia 15-64 tahun,2022,tahun,14.23,1,Persen,bps/2026-10-17/sdg4_4_3_1_v2685.csv
+bps,var2685,utama,Indonesia,kelompok_umur,Usia 15-64 tahun,2023,tahun,13.85,1,Persen,bps/2026-10-17/sdg4_4_3_1_v2685.csv
+bps,var2685,utama,Indonesia,kelompok_umur,Usia 15-64 tahun,2024,tahun,14.29,1,Persen,bps/2026-10-17/sdg4_4_3_1_v2685.csv
+bps,var2685,utama,Indonesia,kelompok_umur,Usia 25-54 tahun,2022,tahun,3.25,1,Persen,bps/2026-10-17/sdg4_4_3_1_v2685.csv
+bps,var2685,utama,Indonesia,kelompok_umur,Usia 25-54 tahun,2023,tahun,3.42,1,Persen,bps/2026-10-17/sdg4_4_3_1_v2685.csv
+bps,var2685,utama,Indonesia,kelompok_umur,Usia 25-54 tahun,2024,tahun,3.52,1,Persen,bps/2026-10-17/sdg4_4_3_1_v2685.csv
+bps,var2685,utama,Indonesia,kelompok_umur,Usia 55-64 tahun,2022,tahun,1.1,1,Persen,bps/2026-10-17/sdg4_4_3_1_v2685.csv
+bps,var2685,utama,Indonesia,kelompok_umur,Usia 55-64 tahun,2023,tahun,1.18,1,Persen,bps/2026-10-17/sdg4_4_3_1_v2685.csv
+bps,var2685,utama,Indonesia,kelompok_umur,Usia 55-64 tahun,2024,tahun,1.35,1,Persen,bps/2026-10-17/sdg4_4_3_1_v2685.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SD/sederajat,2003,tahun,105.8,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SD/sederajat,2004,tahun,107.13,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SD/sederajat,2005,tahun,106.63,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SD/sederajat,2006,tahun,109.96,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SD/sederajat,2007,tahun,112.19,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SD/sederajat,2008,tahun,111.12,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SD/sederajat,2009,tahun,110.42,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SD/sederajat,2010,tahun,111.68,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SD/sederajat,2011,tahun,102.57,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SD/sederajat,2012,tahun,104.33,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SD/sederajat,2013,tahun,107.71,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SD/sederajat,2014,tahun,108.87,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SD/sederajat,2015,tahun,110.5,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SD/sederajat,2016,tahun,109.31,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SD/sederajat,2017,tahun,108.5,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SD/sederajat,2018,tahun,108.61,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SD/sederajat,2019,tahun,107.46,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SD/sederajat,2020,tahun,106.32,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SD/sederajat,2021,tahun,106.2,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SD/sederajat,2022,tahun,106.27,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SD/sederajat,2023,tahun,105.62,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SD/sederajat,2024,tahun,104.82,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SD/sederajat,2025,tahun,104.9,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SM/sederajat,2003,tahun,50.9,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SM/sederajat,2004,tahun,54.38,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SM/sederajat,2005,tahun,55.21,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SM/sederajat,2006,tahun,56.69,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SM/sederajat,2007,tahun,59.46,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SM/sederajat,2008,tahun,59.06,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SM/sederajat,2009,tahun,62.55,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SM/sederajat,2010,tahun,62.85,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SM/sederajat,2011,tahun,64.9,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SM/sederajat,2012,tahun,68.8,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SM/sederajat,2013,tahun,66.61,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SM/sederajat,2014,tahun,74.26,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SM/sederajat,2015,tahun,78.02,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SM/sederajat,2016,tahun,80.89,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SM/sederajat,2017,tahun,82.84,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SM/sederajat,2018,tahun,80.68,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SM/sederajat,2019,tahun,83.98,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SM/sederajat,2020,tahun,84.53,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SM/sederajat,2021,tahun,85.23,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SM/sederajat,2022,tahun,85.49,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SM/sederajat,2023,tahun,86.34,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SM/sederajat,2024,tahun,87.29,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SM/sederajat,2025,tahun,89.53,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SMP/sederajat,2003,tahun,81.1,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SMP/sederajat,2004,tahun,82.24,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SMP/sederajat,2005,tahun,82.09,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SMP/sederajat,2006,tahun,81.87,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SMP/sederajat,2007,tahun,86.37,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SMP/sederajat,2008,tahun,86.86,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SMP/sederajat,2009,tahun,81.25,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SMP/sederajat,2010,tahun,80.59,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SMP/sederajat,2011,tahun,89.83,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SMP/sederajat,2012,tahun,89.49,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SMP/sederajat,2013,tahun,85.96,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SMP/sederajat,2014,tahun,88.63,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SMP/sederajat,2015,tahun,91.17,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SMP/sederajat,2016,tahun,90.12,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SMP/sederajat,2017,tahun,90.23,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SMP/sederajat,2018,tahun,91.52,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SMP/sederajat,2019,tahun,90.57,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SMP/sederajat,2020,tahun,92.06,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SMP/sederajat,2021,tahun,92.8,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SMP/sederajat,2022,tahun,92.11,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SMP/sederajat,2023,tahun,92.51,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SMP/sederajat,2024,tahun,92.21,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var303,utama,Indonesia,jenjang_pendidikan,SMP/sederajat,2025,tahun,93.02,1,persen [kolom satuan kosong; APK dinyatakan dalam persen],bps/2026-10-17/sdg4_apk.csv
+bps,var417,utama,Indonesia,tidak ada,Tidak ada,2010,tahun,11.29,1,Tahun,bps/2026-10-17/sdg4_hls.csv
+bps,var417,utama,Indonesia,tidak ada,Tidak ada,2011,tahun,11.44,1,Tahun,bps/2026-10-17/sdg4_hls.csv
+bps,var417,utama,Indonesia,tidak ada,Tidak ada,2012,tahun,11.68,1,Tahun,bps/2026-10-17/sdg4_hls.csv
+bps,var417,utama,Indonesia,tidak ada,Tidak ada,2013,tahun,12.1,1,Tahun,bps/2026-10-17/sdg4_hls.csv
+bps,var417,utama,Indonesia,tidak ada,Tidak ada,2014,tahun,12.39,1,Tahun,bps/2026-10-17/sdg4_hls.csv
+bps,var417,utama,Indonesia,tidak ada,Tidak ada,2015,tahun,12.55,1,Tahun,bps/2026-10-17/sdg4_hls.csv
+bps,var417,utama,Indonesia,tidak ada,Tidak ada,2016,tahun,12.72,1,Tahun,bps/2026-10-17/sdg4_hls.csv
+bps,var417,utama,Indonesia,tidak ada,Tidak ada,2017,tahun,12.85,1,Tahun,bps/2026-10-17/sdg4_hls.csv
+bps,var417,utama,Indonesia,tidak ada,Tidak ada,2018,tahun,12.91,1,Tahun,bps/2026-10-17/sdg4_hls.csv
+bps,var417,utama,Indonesia,tidak ada,Tidak ada,2019,tahun,12.95,1,Tahun,bps/2026-10-17/sdg4_hls.csv
+bps,var417,utama,Indonesia,tidak ada,Tidak ada,2020,tahun,12.98,1,Tahun,bps/2026-10-17/sdg4_hls.csv
+bps,var417,utama,Indonesia,tidak ada,Tidak ada,2021,tahun,13.08,1,Tahun,bps/2026-10-17/sdg4_hls.csv
+bps,var417,utama,Indonesia,tidak ada,Tidak ada,2022,tahun,13.1,1,Tahun,bps/2026-10-17/sdg4_hls.csv
+bps,var417,utama,Indonesia,tidak ada,Tidak ada,2023,tahun,13.15,1,Tahun,bps/2026-10-17/sdg4_hls.csv
+bps,var417,utama,Indonesia,tidak ada,Tidak ada,2024,tahun,13.21,1,Tahun,bps/2026-10-17/sdg4_hls.csv
+bps,var417,utama,Indonesia,tidak ada,Tidak ada,2025,tahun,13.3,1,Tahun,bps/2026-10-17/sdg4_hls.csv
+wdi,SE.TER.ENRR,pembanding,Indonesia,jenis_kelamin,Total (semua jenis kelamin),1970,tahun,2.7995400428772,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR,pembanding,Indonesia,jenis_kelamin,Total (semua jenis kelamin),1971,tahun,,0,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR,pembanding,Indonesia,jenis_kelamin,Total (semua jenis kelamin),1972,tahun,2.72563004493713,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR,pembanding,Indonesia,jenis_kelamin,Total (semua jenis kelamin),1973,tahun,2.65714001655579,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR,pembanding,Indonesia,jenis_kelamin,Total (semua jenis kelamin),1974,tahun,2.55682992935181,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR,pembanding,Indonesia,jenis_kelamin,Total (semua jenis kelamin),1975,tahun,2.55683994293213,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR,pembanding,Indonesia,jenis_kelamin,Total (semua jenis kelamin),1976,tahun,2.59382009506226,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR,pembanding,Indonesia,jenis_kelamin,Total (semua jenis kelamin),1977,tahun,2.29890990257263,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR,pembanding,Indonesia,jenis_kelamin,Total (semua jenis kelamin),1978,tahun,2.43842005729675,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR,pembanding,Indonesia,jenis_kelamin,Total (semua jenis kelamin),1979,tahun,2.3416600227356,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR,pembanding,Indonesia,jenis_kelamin,Total (semua jenis kelamin),1980,tahun,3.36890006065369,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR,pembanding,Indonesia,jenis_kelamin,Total (semua jenis kelamin),1981,tahun,3.84965991973877,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR,pembanding,Indonesia,jenis_kelamin,Total (semua jenis kelamin),1982,tahun,3.86715006828308,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR,pembanding,Indonesia,jenis_kelamin,Total (semua jenis kelamin),1983,tahun,4.07499980926514,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR,pembanding,Indonesia,jenis_kelamin,Total (semua jenis kelamin),1984,tahun,5.33014011383057,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR,pembanding,Indonesia,jenis_kelamin,Total (semua jenis kelamin),1985,tahun,6.09567022323608,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR,pembanding,Indonesia,jenis_kelamin,Total (semua jenis kelamin),1986,tahun,6.33362007141113,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR,pembanding,Indonesia,jenis_kelamin,Total (semua jenis kelamin),1987,tahun,7.50644016265869,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR,pembanding,Indonesia,jenis_kelamin,Total (semua jenis kelamin),1988,tahun,6.79020977020264,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR,pembanding,Indonesia,jenis_kelamin,Total (semua jenis kelamin),1989,tahun,7.84708976745605,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR,pembanding,Indonesia,jenis_kelamin,Total (semua jenis kelamin),1990,tahun,8.29506015777588,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR,pembanding,Indonesia,jenis_kelamin,Total (semua jenis kelamin),1991,tahun,8.55126953125,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR,pembanding,Indonesia,jenis_kelamin,Total (semua jenis kelamin),1992,tahun,9.37843990325928,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR,pembanding,Indonesia,jenis_kelamin,Total (semua jenis kelamin),1993,tahun,9.33967018127441,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR,pembanding,Indonesia,jenis_kelamin,Total (semua jenis kelamin),1994,tahun,10.4964103698731,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR,pembanding,Indonesia,jenis_kelamin,Total (semua jenis kelamin),1995,tahun,11.301739692688,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR,pembanding,Indonesia,jenis_kelamin,Total (semua jenis kelamin),1996,tahun,11.5222902297974,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR,pembanding,Indonesia,jenis_kelamin,Total (semua jenis kelamin),1997,tahun,13.3638401031494,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR,pembanding,Indonesia,jenis_kelamin,Total (semua jenis kelamin),1998,tahun,13.3347997665405,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR,pembanding,Indonesia,jenis_kelamin,Total (semua jenis kelamin),1999,tahun,14.6863803863525,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR,pembanding,Indonesia,jenis_kelamin,Total (semua jenis kelamin),2000,tahun,14.810640335083,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR,pembanding,Indonesia,jenis_kelamin,Total (semua jenis kelamin),2001,tahun,14.1229801177978,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR,pembanding,Indonesia,jenis_kelamin,Total (semua jenis kelamin),2002,tahun,14.6824598312378,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR,pembanding,Indonesia,jenis_kelamin,Total (semua jenis kelamin),2003,tahun,15.7722797393799,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR,pembanding,Indonesia,jenis_kelamin,Total (semua jenis kelamin),2004,tahun,16.1766300201416,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR,pembanding,Indonesia,jenis_kelamin,Total (semua jenis kelamin),2005,tahun,16.6967105865479,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR,pembanding,Indonesia,jenis_kelamin,Total (semua jenis kelamin),2006,tahun,16.767240524292,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR,pembanding,Indonesia,jenis_kelamin,Total (semua jenis kelamin),2007,tahun,17.5765991210938,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR,pembanding,Indonesia,jenis_kelamin,Total (semua jenis kelamin),2008,tahun,20.5209503173828,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR,pembanding,Indonesia,jenis_kelamin,Total (semua jenis kelamin),2009,tahun,22.6933307647705,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR,pembanding,Indonesia,jenis_kelamin,Total (semua jenis kelamin),2010,tahun,23.4159086398462,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR,pembanding,Indonesia,jenis_kelamin,Total (semua jenis kelamin),2011,tahun,25.027444191823,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR,pembanding,Indonesia,jenis_kelamin,Total (semua jenis kelamin),2012,tahun,29.0425391195214,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR,pembanding,Indonesia,jenis_kelamin,Total (semua jenis kelamin),2013,tahun,29.894529174265,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR,pembanding,Indonesia,jenis_kelamin,Total (semua jenis kelamin),2014,tahun,29.9904910473273,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR,pembanding,Indonesia,jenis_kelamin,Total (semua jenis kelamin),2015,tahun,32.4590200433758,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR,pembanding,Indonesia,jenis_kelamin,Total (semua jenis kelamin),2016,tahun,34.8307173410877,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR,pembanding,Indonesia,jenis_kelamin,Total (semua jenis kelamin),2017,tahun,35.967012362631,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR,pembanding,Indonesia,jenis_kelamin,Total (semua jenis kelamin),2018,tahun,36.1494878042588,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR,pembanding,Indonesia,jenis_kelamin,Total (semua jenis kelamin),2019,tahun,37.3230862728703,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR,pembanding,Indonesia,jenis_kelamin,Total (semua jenis kelamin),2020,tahun,38.1650601406923,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR,pembanding,Indonesia,jenis_kelamin,Total (semua jenis kelamin),2021,tahun,40.6293239880732,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR,pembanding,Indonesia,jenis_kelamin,Total (semua jenis kelamin),2022,tahun,42.3260385456152,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR,pembanding,Indonesia,jenis_kelamin,Total (semua jenis kelamin),2023,tahun,44.8813034886441,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.FE,pembanding,Indonesia,jenis_kelamin,Perempuan,1970,tahun,1.38655996322632,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.FE,pembanding,Indonesia,jenis_kelamin,Perempuan,1971,tahun,,0,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.FE,pembanding,Indonesia,jenis_kelamin,Perempuan,1972,tahun,1.50925004482269,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.FE,pembanding,Indonesia,jenis_kelamin,Perempuan,1973,tahun,,0,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.FE,pembanding,Indonesia,jenis_kelamin,Perempuan,1974,tahun,,0,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.FE,pembanding,Indonesia,jenis_kelamin,Perempuan,1975,tahun,,0,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.FE,pembanding,Indonesia,jenis_kelamin,Perempuan,1976,tahun,1.456169962883,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.FE,pembanding,Indonesia,jenis_kelamin,Perempuan,1977,tahun,,0,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.FE,pembanding,Indonesia,jenis_kelamin,Perempuan,1978,tahun,,0,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.FE,pembanding,Indonesia,jenis_kelamin,Perempuan,1979,tahun,,0,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.FE,pembanding,Indonesia,jenis_kelamin,Perempuan,1980,tahun,,0,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.FE,pembanding,Indonesia,jenis_kelamin,Perempuan,1981,tahun,,0,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.FE,pembanding,Indonesia,jenis_kelamin,Perempuan,1982,tahun,2.417720079422,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.FE,pembanding,Indonesia,jenis_kelamin,Perempuan,1983,tahun,2.61982011795044,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.FE,pembanding,Indonesia,jenis_kelamin,Perempuan,1984,tahun,3.33211994171143,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.FE,pembanding,Indonesia,jenis_kelamin,Perempuan,1985,tahun,3.94980001449585,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.FE,pembanding,Indonesia,jenis_kelamin,Perempuan,1986,tahun,,0,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.FE,pembanding,Indonesia,jenis_kelamin,Perempuan,1987,tahun,,0,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.FE,pembanding,Indonesia,jenis_kelamin,Perempuan,1988,tahun,,0,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.FE,pembanding,Indonesia,jenis_kelamin,Perempuan,1989,tahun,,0,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.FE,pembanding,Indonesia,jenis_kelamin,Perempuan,1990,tahun,,0,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.FE,pembanding,Indonesia,jenis_kelamin,Perempuan,1991,tahun,,0,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.FE,pembanding,Indonesia,jenis_kelamin,Perempuan,1992,tahun,,0,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.FE,pembanding,Indonesia,jenis_kelamin,Perempuan,1993,tahun,7.42917013168335,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.FE,pembanding,Indonesia,jenis_kelamin,Perempuan,1994,tahun,,0,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.FE,pembanding,Indonesia,jenis_kelamin,Perempuan,1995,tahun,8.74075984954834,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.FE,pembanding,Indonesia,jenis_kelamin,Perempuan,1996,tahun,8.12001991271973,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.FE,pembanding,Indonesia,jenis_kelamin,Perempuan,1997,tahun,,0,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.FE,pembanding,Indonesia,jenis_kelamin,Perempuan,1998,tahun,,0,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.FE,pembanding,Indonesia,jenis_kelamin,Perempuan,1999,tahun,13.3949499130249,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.FE,pembanding,Indonesia,jenis_kelamin,Perempuan,2000,tahun,13.9490804672241,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.FE,pembanding,Indonesia,jenis_kelamin,Perempuan,2001,tahun,12.2964897155762,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.FE,pembanding,Indonesia,jenis_kelamin,Perempuan,2002,tahun,13.718469619751,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.FE,pembanding,Indonesia,jenis_kelamin,Perempuan,2003,tahun,14.1100702285767,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.FE,pembanding,Indonesia,jenis_kelamin,Perempuan,2004,tahun,14.4632501602173,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.FE,pembanding,Indonesia,jenis_kelamin,Perempuan,2005,tahun,,0,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.FE,pembanding,Indonesia,jenis_kelamin,Perempuan,2006,tahun,16.2031497955322,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.FE,pembanding,Indonesia,jenis_kelamin,Perempuan,2007,tahun,17.7361507415771,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.FE,pembanding,Indonesia,jenis_kelamin,Perempuan,2008,tahun,19.9365501403809,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.FE,pembanding,Indonesia,jenis_kelamin,Perempuan,2009,tahun,22.5412197113037,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.FE,pembanding,Indonesia,jenis_kelamin,Perempuan,2010,tahun,22.4019892604013,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.FE,pembanding,Indonesia,jenis_kelamin,Perempuan,2011,tahun,23.6617768904453,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.FE,pembanding,Indonesia,jenis_kelamin,Perempuan,2012,tahun,30.2814797483833,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.FE,pembanding,Indonesia,jenis_kelamin,Perempuan,2013,tahun,32.0561594083682,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.FE,pembanding,Indonesia,jenis_kelamin,Perempuan,2014,tahun,32.1127656778979,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.FE,pembanding,Indonesia,jenis_kelamin,Perempuan,2015,tahun,34.5220912776747,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.FE,pembanding,Indonesia,jenis_kelamin,Perempuan,2016,tahun,37.2604595362436,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.FE,pembanding,Indonesia,jenis_kelamin,Perempuan,2017,tahun,38.5952407318475,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.FE,pembanding,Indonesia,jenis_kelamin,Perempuan,2018,tahun,38.8659567828988,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.FE,pembanding,Indonesia,jenis_kelamin,Perempuan,2019,tahun,39.5239845592779,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.FE,pembanding,Indonesia,jenis_kelamin,Perempuan,2020,tahun,40.8939254732285,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.FE,pembanding,Indonesia,jenis_kelamin,Perempuan,2021,tahun,44.0458339836419,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.FE,pembanding,Indonesia,jenis_kelamin,Perempuan,2022,tahun,46.6107282434441,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.FE,pembanding,Indonesia,jenis_kelamin,Perempuan,2023,tahun,49.8897505872353,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.MA,pembanding,Indonesia,jenis_kelamin,Laki-laki,1970,tahun,4.2559700012207,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.MA,pembanding,Indonesia,jenis_kelamin,Laki-laki,1971,tahun,,0,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.MA,pembanding,Indonesia,jenis_kelamin,Laki-laki,1972,tahun,3.95281004905701,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.MA,pembanding,Indonesia,jenis_kelamin,Laki-laki,1973,tahun,,0,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.MA,pembanding,Indonesia,jenis_kelamin,Laki-laki,1974,tahun,,0,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.MA,pembanding,Indonesia,jenis_kelamin,Laki-laki,1975,tahun,,0,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.MA,pembanding,Indonesia,jenis_kelamin,Laki-laki,1976,tahun,3.7309000492096,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.MA,pembanding,Indonesia,jenis_kelamin,Laki-laki,1977,tahun,,0,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.MA,pembanding,Indonesia,jenis_kelamin,Laki-laki,1978,tahun,,0,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.MA,pembanding,Indonesia,jenis_kelamin,Laki-laki,1979,tahun,,0,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.MA,pembanding,Indonesia,jenis_kelamin,Laki-laki,1980,tahun,,0,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.MA,pembanding,Indonesia,jenis_kelamin,Laki-laki,1981,tahun,,0,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.MA,pembanding,Indonesia,jenis_kelamin,Laki-laki,1982,tahun,5.30711984634399,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.MA,pembanding,Indonesia,jenis_kelamin,Laki-laki,1983,tahun,5.51971006393433,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.MA,pembanding,Indonesia,jenis_kelamin,Laki-laki,1984,tahun,7.31281995773315,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.MA,pembanding,Indonesia,jenis_kelamin,Laki-laki,1985,tahun,8.22426986694336,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.MA,pembanding,Indonesia,jenis_kelamin,Laki-laki,1986,tahun,,0,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.MA,pembanding,Indonesia,jenis_kelamin,Laki-laki,1987,tahun,,0,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.MA,pembanding,Indonesia,jenis_kelamin,Laki-laki,1988,tahun,,0,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.MA,pembanding,Indonesia,jenis_kelamin,Laki-laki,1989,tahun,,0,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.MA,pembanding,Indonesia,jenis_kelamin,Laki-laki,1990,tahun,,0,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.MA,pembanding,Indonesia,jenis_kelamin,Laki-laki,1991,tahun,,0,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.MA,pembanding,Indonesia,jenis_kelamin,Laki-laki,1992,tahun,,0,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.MA,pembanding,Indonesia,jenis_kelamin,Laki-laki,1993,tahun,11.2212295532227,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.MA,pembanding,Indonesia,jenis_kelamin,Laki-laki,1994,tahun,,0,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.MA,pembanding,Indonesia,jenis_kelamin,Laki-laki,1995,tahun,13.8168201446533,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.MA,pembanding,Indonesia,jenis_kelamin,Laki-laki,1996,tahun,14.8575201034546,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.MA,pembanding,Indonesia,jenis_kelamin,Laki-laki,1997,tahun,,0,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.MA,pembanding,Indonesia,jenis_kelamin,Laki-laki,1998,tahun,,0,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.MA,pembanding,Indonesia,jenis_kelamin,Laki-laki,1999,tahun,15.9441003799438,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.MA,pembanding,Indonesia,jenis_kelamin,Laki-laki,2000,tahun,15.6476097106934,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.MA,pembanding,Indonesia,jenis_kelamin,Laki-laki,2001,tahun,15.8927698135376,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.MA,pembanding,Indonesia,jenis_kelamin,Laki-laki,2002,tahun,15.6141195297241,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.MA,pembanding,Indonesia,jenis_kelamin,Laki-laki,2003,tahun,17.3745098114014,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.MA,pembanding,Indonesia,jenis_kelamin,Laki-laki,2004,tahun,17.8238506317139,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.MA,pembanding,Indonesia,jenis_kelamin,Laki-laki,2005,tahun,,0,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.MA,pembanding,Indonesia,jenis_kelamin,Laki-laki,2006,tahun,17.3072395324707,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.MA,pembanding,Indonesia,jenis_kelamin,Laki-laki,2007,tahun,17.4241199493408,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.MA,pembanding,Indonesia,jenis_kelamin,Laki-laki,2008,tahun,21.0785808563232,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.MA,pembanding,Indonesia,jenis_kelamin,Laki-laki,2009,tahun,22.8383102416992,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.MA,pembanding,Indonesia,jenis_kelamin,Laki-laki,2010,tahun,24.3812912235057,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.MA,pembanding,Indonesia,jenis_kelamin,Laki-laki,2011,tahun,26.3263558953544,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.MA,pembanding,Indonesia,jenis_kelamin,Laki-laki,2012,tahun,27.8649952992931,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.MA,pembanding,Indonesia,jenis_kelamin,Laki-laki,2013,tahun,27.8404698064134,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.MA,pembanding,Indonesia,jenis_kelamin,Laki-laki,2014,tahun,27.9738756598721,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.MA,pembanding,Indonesia,jenis_kelamin,Laki-laki,2015,tahun,30.4981659300184,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.MA,pembanding,Indonesia,jenis_kelamin,Laki-laki,2016,tahun,32.5202001733187,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.MA,pembanding,Indonesia,jenis_kelamin,Laki-laki,2017,tahun,33.4663266882317,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.MA,pembanding,Indonesia,jenis_kelamin,Laki-laki,2018,tahun,33.5640873664656,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.MA,pembanding,Indonesia,jenis_kelamin,Laki-laki,2019,tahun,35.2283379088062,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.MA,pembanding,Indonesia,jenis_kelamin,Laki-laki,2020,tahun,35.5680901166469,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.MA,pembanding,Indonesia,jenis_kelamin,Laki-laki,2021,tahun,37.3788928461553,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.MA,pembanding,Indonesia,jenis_kelamin,Laki-laki,2022,tahun,38.2511438594208,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json
+wdi,SE.TER.ENRR.MA,pembanding,Indonesia,jenis_kelamin,Laki-laki,2023,tahun,40.1195230358183,1,persen (% gross) [kolom unit kosong di berkas mentah],wdi/2026-10-20/data/kelompok-05-hal-01.json

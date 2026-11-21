@@ -1,0 +1,65 @@
+seri_kode,tahun,wilayah_id,wilayah,kategori,tahun_mulai_target,nilai,status
+var1429,2023,9200,PAPUA BARAT DAYA,Tidak ada,2023,,missing
+var1429,2023,9500,PAPUA SELATAN,Tidak ada,2023,,missing
+var1429,2023,9600,PAPUA TENGAH,Tidak ada,2023,,missing
+var1429,2023,9700,PAPUA PEGUNUNGAN,Tidak ada,2023,,missing
+var1443,2023,9200,PAPUA BARAT DAYA,Tidak ada,2023,,missing
+var1443,2023,9500,PAPUA SELATAN,Tidak ada,2023,,missing
+var1443,2023,9600,PAPUA TENGAH,Tidak ada,2023,,missing
+var1443,2023,9700,PAPUA PEGUNUNGAN,Tidak ada,2023,,missing
+var2685,2023,9200,PAPUA BARAT DAYA,Usia 15-24 tahun,2023,,missing
+var2685,2023,9200,PAPUA BARAT DAYA,Usia 15-64 tahun,2023,,missing
+var2685,2023,9200,PAPUA BARAT DAYA,Usia 25-54 tahun,2023,,missing
+var2685,2023,9200,PAPUA BARAT DAYA,Usia 55-64 tahun,2023,,missing
+var2685,2023,9500,PAPUA SELATAN,Usia 15-24 tahun,2023,,missing
+var2685,2023,9500,PAPUA SELATAN,Usia 15-64 tahun,2023,,missing
+var2685,2023,9500,PAPUA SELATAN,Usia 25-54 tahun,2023,,missing
+var2685,2023,9500,PAPUA SELATAN,Usia 55-64 tahun,2023,,missing
+var2685,2023,9600,PAPUA TENGAH,Usia 15-24 tahun,2023,,missing
+var2685,2023,9600,PAPUA TENGAH,Usia 15-64 tahun,2023,,missing
+var2685,2023,9600,PAPUA TENGAH,Usia 25-54 tahun,2023,,missing
+var2685,2023,9600,PAPUA TENGAH,Usia 55-64 tahun,2023,,missing
+var2685,2023,9700,PAPUA PEGUNUNGAN,Usia 15-24 tahun,2023,,missing
+var2685,2023,9700,PAPUA PEGUNUNGAN,Usia 15-64 tahun,2023,,missing
+var2685,2023,9700,PAPUA PEGUNUNGAN,Usia 25-54 tahun,2023,,missing
+var2685,2023,9700,PAPUA PEGUNUNGAN,Usia 55-64 tahun,2023,,missing
+var303,2003,2100,KEP. RIAU,SD/sederajat,2003,,missing
+var303,2003,2100,KEP. RIAU,SM/sederajat,2003,,missing
+var303,2003,2100,KEP. RIAU,SMP/sederajat,2003,,missing
+var303,2004,2100,KEP. RIAU,SD/sederajat,2003,,missing
+var303,2004,2100,KEP. RIAU,SM/sederajat,2003,,missing
+var303,2004,2100,KEP. RIAU,SMP/sederajat,2003,,missing
+var303,2004,9100,PAPUA BARAT,SD/sederajat,2004,,missing
+var303,2004,9100,PAPUA BARAT,SM/sederajat,2004,,missing
+var303,2004,9100,PAPUA BARAT,SMP/sederajat,2004,,missing
+var303,2005,1100,ACEH,SD/sederajat,2003,,missing
+var303,2005,1100,ACEH,SM/sederajat,2003,,missing
+var303,2005,1100,ACEH,SMP/sederajat,2003,,missing
+var303,2005,7600,SULAWESI BARAT,SD/sederajat,2005,,missing
+var303,2005,7600,SULAWESI BARAT,SM/sederajat,2005,,missing
+var303,2005,7600,SULAWESI BARAT,SMP/sederajat,2005,,missing
+var303,2005,9100,PAPUA BARAT,SD/sederajat,2004,,missing
+var303,2005,9100,PAPUA BARAT,SM/sederajat,2004,,missing
+var303,2005,9100,PAPUA BARAT,SMP/sederajat,2004,,missing
+var303,2013,6500,KALIMANTAN UTARA,SD/sederajat,2013,,missing
+var303,2013,6500,KALIMANTAN UTARA,SM/sederajat,2013,,missing
+var303,2013,6500,KALIMANTAN UTARA,SMP/sederajat,2013,,missing
+var303,2014,6500,KALIMANTAN UTARA,SD/sederajat,2013,,missing
+var303,2014,6500,KALIMANTAN UTARA,SM/sederajat,2013,,missing
+var303,2014,6500,KALIMANTAN UTARA,SMP/sederajat,2013,,missing
+var303,2023,9200,PAPUA BARAT DAYA,SD/sederajat,2023,,missing
+var303,2023,9200,PAPUA BARAT DAYA,SM/sederajat,2023,,missing
+var303,2023,9200,PAPUA BARAT DAYA,SMP/sederajat,2023,,missing
+var303,2023,9500,PAPUA SELATAN,SD/sederajat,2023,,missing
+var303,2023,9500,PAPUA SELATAN,SM/sederajat,2023,,missing
+var303,2023,9500,PAPUA SELATAN,SMP/sederajat,2023,,missing
+var303,2023,9600,PAPUA TENGAH,SD/sederajat,2023,,missing
+var303,2023,9600,PAPUA TENGAH,SM/sederajat,2023,,missing
+var303,2023,9600,PAPUA TENGAH,SMP/sederajat,2023,,missing
+var303,2023,9700,PAPUA PEGUNUNGAN,SD/sederajat,2023,,missing
+var303,2023,9700,PAPUA PEGUNUNGAN,SM/sederajat,2023,,missing
+var303,2023,9700,PAPUA PEGUNUNGAN,SMP/sederajat,2023,,missing
+var417,2023,9200,PAPUA BARAT DAYA,Tidak ada,2023,,missing
+var417,2023,9500,PAPUA SELATAN,Tidak ada,2023,,missing
+var417,2023,9600,PAPUA TENGAH,Tidak ada,2023,,missing
+var417,2023,9700,PAPUA PEGUNUNGAN,Tidak ada,2023,,missing
