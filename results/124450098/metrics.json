@@ -1,7 +1,16 @@
 {
   "metrik": {
     "pasangan_rekonsiliasi": 1,
-    "periode_beririsan": 9
+    "periode_beririsan": 9,
+    "seri_dibandingkan": 2,
+    "baris_silver": 393,
+    "wilayah_unik": 39,
+    "kolom_silver": 11,
+    "null_kolom_wajib": 0,
+    "duplikasi_primary_key": 0,
+    "hash_terverifikasi": 1,
+    "tahun_awal": 2015,
+    "tahun_akhir": 2025
   },
   "seed": 0,
   "data_hash": "47a36c7c376bfc28458f66b5b1370271ed253205e4c57fd7c1c748c4849a438e",
