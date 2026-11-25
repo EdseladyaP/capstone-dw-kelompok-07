@@ -59,6 +59,9 @@ keluaran:
 - **Dimensi rincian yang tersedia hanya jenis kelamin** (total/perempuan/laki-laki). Tidak ada
   dimensi **daerah/provinsi** maupun **kelompok umur** — seluruh baris pada berkas mentah hanya
   untuk Indonesia nasional (`countryiso3code = IDN`).
+- **Baris ada vs nilai ada:** setiap indikator memuat **66 baris tahun (1960–2025)**, tetapi hanya
+  **53 yang bernilai** pada rincian total (1970–2023, tanpa 1971; 2024–2025 masih `null`). Profil
+  memakai **53 periode bernilai**; baris `null` tidak dihitung sebagai periode tersedia.
 - **Satuan:** kolom `unit` pada berkas mentah **kosong**; satuan dipastikan dari nama indikator
   (`% gross`). Nilai total 1970–2023 berkisar **2,30–44,88**.
 - **Tahun terbit:** dipublikasi UIS/UNESCO **2026-02**; snapshot WDI diunduh **2026-10-20**
@@ -81,6 +84,7 @@ keluaran:
 | Cakupan | Nasional saja | Nasional (`wilayah_kode` 9999) + 38 provinsi |
 | Periode | 1970–2023 | 2015–2025 |
 | **Irisan periode** | **2015–2023 (9 tahun)** | idem |
+| **Irisan dengan seluruh seri utama** | **2003–2023 (21 tahun)** | gabungan tahun survei `var303`, `var1443`, `var2685`, `var417`, `var1429` |
 | Tahun terbit | UIS 2026-02 / snapshot 2026-10-20 | 2025-12-12 |
 | Dimensi rincian | jenis kelamin (total/FE/MA) | tidak ada |
 
@@ -119,7 +123,8 @@ definisi populasi**.
 ## 6. Keluaran & reproduksi
 
 - `scripts/profil_seri_pembanding.py` — skrip profiling.
-- `docs/tabel_ketersediaan_seri_pembanding.csv` — tabel ketersediaan seri × rincian (15 baris).
+- `docs/tabel_ketersediaan_seri_pembanding.csv` — tabel ketersediaan seri × rincian (15 baris) dengan
+  kolom `baris_ada`, `nilai_ada`, `tahun_survei_utama_tersedia`, dan `pasangan_tahun_irisan`.
 - `docs/ketersediaan_seri_periode_rincian.csv` — tabel seri × periode × rincian (281 baris).
 - Keputusan terkait dicatat di `log-keputusan.csv` (K-004, K-005).
 

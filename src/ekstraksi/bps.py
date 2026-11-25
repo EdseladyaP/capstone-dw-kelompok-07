@@ -1,134 +1,235 @@
-﻿import json
-from pathlib import Path
+"""Pembaca BPS: JSON WebAPI (respons asli, berhalaman) dan CSV hasil ratakan.
+
+Pembaca tidak membersihkan apa pun. Keluarannya tabel panjang yang setia pada berkas, ditambah
+_berkas_raw dan _sha256_raw. Metadata seri (judul, satuan, catatan) dibaca ke tabel terpisah.
+"""
+import html
+import json
+import re
+from html.parser import HTMLParser
+
 import pandas as pd
-from src.common.manifest import sha256_raw
+
+from src.common.manifest import RAW, sha256_raw
 
 
-def _deteksi_seri_bps(nama_file: str) -> str:
-    nama = nama_file.lower()
-    if "v2685" in nama:
-        return "var2685"
-    elif "apk_pt" in nama:
-        return "var1443"
-    elif "apk" in nama:
-        return "var303"
-    elif "hls" in nama:
-        return "var417"
-    elif "rls" in nama:
-        return "var1429"
-    elif "manifest" in nama:
-        return "manifest_asal"
-    return "lainnya"
+def _kamus(daftar):
+    """[{'val': 1100, 'label': 'ACEH'}, ...] -> {'1100': 'ACEH'} dengan kode sebagai teks."""
+    return {str(x["val"]): x["label"] for x in daftar}
 
 
-def _adalah_provinsi_atau_nasional(wilayah_id: str) -> bool:
-    wid = str(wilayah_id).strip()
-    return wid.endswith("00") or wid in {"9999", "0"}
+def potong_kunci(kunci, kode_var, wilayah, rincian, tahun, periode):
+    """Potong kunci datacontent = wilayah + var + turvar + tahun + turtahun (bersambung tanpa pemisah).
+
+    Panjang setiap potongan diambil dari panjang kode di daftar labelnya, bukan dihafal. Satu daftar bisa
+    berisi kode dengan panjang berbeda (misalnya kode tahun 93–99 dua digit dan 100 ke atas tiga digit),
+    jadi semua kombinasi panjang dicoba dan hanya potongan yang semua bagiannya ada di daftar yang diterima.
+    Lebih dari satu potongan yang sah: pembaca berhenti (ambigu). Tidak ada potongan yang sah: None, dan
+    kunci itu dilaporkan oleh baca_json (bukan diam-diam dibuang).
+    """
+    pjg = lambda kamus: sorted({len(k) for k in kamus})  # noqa: E731
+    sah = []
+    for lw in pjg(wilayah):
+        for lr in pjg(rincian):
+            for lp in pjg(periode):
+                lt = len(kunci) - lw - len(kode_var) - lr - lp
+                if lt not in pjg(tahun):
+                    continue
+                i = 0
+                k_wil = kunci[i:i + lw]; i += lw
+                k_var = kunci[i:i + len(kode_var)]; i += len(kode_var)
+                k_rin = kunci[i:i + lr]; i += lr
+                k_th = kunci[i:i + lt]; i += lt
+                k_per = kunci[i:]
+                if k_var == kode_var and k_wil in wilayah and k_rin in rincian and k_th in tahun and k_per in periode:
+                    sah.append((k_wil, k_rin, k_th, k_per))
+    if len(sah) > 1:
+        raise ValueError(f"kunci {kunci}: {len(sah)} cara memotong yang sah (seharusnya tepat satu)")
+    return sah[0] if sah else None
 
 
-def _saring_hls_csv(df: pd.DataFrame, rel_path: str) -> pd.DataFrame:
-    awal = len(df)
-    mask_simpan = df["wilayah_id"].apply(_adalah_provinsi_atau_nasional)
-    df_hasil = df[mask_simpan].copy()
-    dikeluarkan = awal - len(df_hasil)
-    print(
-        f"[HLS FILTER] {rel_path}: {dikeluarkan} baris kabupaten/kota dikeluarkan "
-        f"(tersisa {len(df_hasil)} dari {awal} baris)."
-    )
-    return df_hasil
+tak_terbaca = []      # kunci datacontent yang tidak cocok dengan daftar label (dilaporkan di reports/)
 
 
-def _urai_json_bps(data, rel_path: str, is_hls: bool) -> pd.DataFrame:
-    payload = None
-    if isinstance(data, dict):
-        payload = data
-    elif isinstance(data, list):
-        for elem in data:
-            if isinstance(elem, dict) and "datacontent" in elem:
-                payload = elem
-                break
-
-    if payload and "datacontent" in payload:
-        vervar_list = payload.get("vervar", [])
-        vervar_sorted = sorted(vervar_list, key=lambda v: len(str(v["val"])), reverse=True)
-        vervar_map = {str(v["val"]): str(v["label"]) for v in vervar_sorted}
-
-        turvar_map = {str(v["val"]): str(v["label"]) for v in payload.get("turvar", [])}
-        tahun_map = {str(v["val"]): str(v["label"]) for v in payload.get("tahun", [])}
-        turtahun_map = {str(v["val"]): str(v["label"]) for v in payload.get("turtahun", [])}
-        var_info = payload.get("var", [{}])[0] if isinstance(payload.get("var"), list) and payload.get("var") else {}
-        var_id = str(var_info.get("val", ""))
-
-        rows = []
-        dikeluarkan = 0
-
-        for kode_komposit, nilai in payload["datacontent"].items():
-            kode_str = str(kode_komposit)
-            wilayah_id = next((vid for vid in vervar_map if kode_str.startswith(vid)), "")
-
-            if is_hls and not _adalah_provinsi_atau_nasional(wilayah_id):
-                dikeluarkan += 1
+def baca_json(jalur):
+    """Baca satu JSON WebAPI BPS. Mengembalikan (data_panjang, metadata_seri)."""
+    halaman_semua = json.loads((RAW / jalur).read_text(encoding="utf-8"))
+    baris, meta = [], []
+    for no_hal, hal in enumerate(halaman_semua, start=1):
+        var = hal["var"][0]
+        wilayah = _kamus(hal["vervar"])
+        rincian = _kamus(hal["turvar"])
+        tahun = _kamus(hal["tahun"])
+        periode = _kamus(hal["turtahun"])
+        kode_var = str(var["val"])
+        for kunci, nilai in hal["datacontent"].items():
+            potong = potong_kunci(kunci, kode_var, wilayah, rincian, tahun, periode)
+            if potong is None:
+                tak_terbaca.append({"_berkas_raw": jalur, "halaman": no_hal, "kunci": kunci, "nilai": nilai})
                 continue
-
-            rows.append({
-                "kode_komposit": kode_str,
-                "var_id": var_id,
-                "var_label": var_info.get("label", ""),
-                "wilayah_id": wilayah_id,
-                "wilayah": vervar_map.get(wilayah_id, ""),
-                "turvar_opsi": json.dumps(turvar_map, ensure_ascii=False),
-                "tahun_opsi": json.dumps(tahun_map, ensure_ascii=False),
-                "periode_opsi": json.dumps(turtahun_map, ensure_ascii=False),
-                "nilai": nilai,
-                "satuan": var_info.get("unit", ""),
-            })
-
-        if is_hls:
-            total_awal = len(rows) + dikeluarkan
-            print(
-                f"[HLS FILTER] {rel_path}: {dikeluarkan} baris kabupaten/kota dikeluarkan "
-                f"(tersisa {len(rows)} dari {total_awal} baris)."
-            )
-
-        return pd.DataFrame(rows)
-
-    items = data if isinstance(data, list) else [data]
-    return pd.json_normalize(items)
+            k_wil, k_rin, k_th, k_per = potong
+            baris.append({"var_id": kode_var, "wilayah_id": k_wil, "wilayah": wilayah[k_wil],
+                          "turvar_id": k_rin, "turvar": rincian[k_rin], "tahun_id": k_th, "tahun": tahun[k_th],
+                          "turtahun_id": k_per, "turtahun": periode[k_per], "nilai": nilai, "_halaman": no_hal})
+        meta.append({"var_id": kode_var, "judul": var["label"], "satuan": var.get("unit", ""),
+                     "catatan": var.get("note", ""), "definisi": var.get("def", ""), "desimal": var.get("decimal"),
+                     "last_update": hal.get("last_update"), "tahun_terbit": ",".join(tahun.values()),
+                     "_halaman": no_hal})
+    df = pd.DataFrame(baris)
+    df["_berkas_raw"] = jalur
+    df["_sha256_raw"] = sha256_raw(jalur)
+    m = pd.DataFrame(meta)
+    m["_berkas_raw"] = jalur
+    return df, m
 
 
-def jalankan() -> dict:
-    raw_dir = Path("data/raw/bps")
-    hasil = {}
+def statis(jalur):
+    """True bila JSON adalah tabel statis (kunci 'data' berisi tabel HTML), bukan respons tabel dinamis."""
+    isi = json.loads((RAW / jalur).read_text(encoding="utf-8"))
+    return isinstance(isi, dict) and isinstance(isi.get("data"), dict) and "table" in isi["data"]
 
-    file_list = sorted(list(raw_dir.glob("**/*.csv")) + list(raw_dir.glob("**/*.json")))
 
-    for file_path in file_list:
-        rel_path = str(file_path.relative_to("data/raw")).replace("\\", "/")
-        sha_val = sha256_raw(rel_path)
-        seri_kode = _deteksi_seri_bps(file_path.name)
-        kunci_df = f"bps_{file_path.stem}_{file_path.suffix.lstrip('.')}"
+class _PembacaTabel(HTMLParser):
+    """Kumpulkan sel <tr>/<td> beserta colspan dan rowspan (pustaka standar, tanpa lxml)."""
 
-        if file_path.suffix == ".csv":
-            df_csv = pd.read_csv(file_path)
+    def __init__(self):
+        super().__init__()
+        self.baris, self.sel = [], None
 
-            if "hls" in file_path.name.lower():
-                df_csv = _saring_hls_csv(df_csv, rel_path)
+    def handle_starttag(self, tag, attrs):
+        a = dict(attrs)
+        if tag == "tr":
+            self.baris.append([])
+        elif tag in ("td", "th") and self.baris:
+            self.sel = {"teks": "", "colspan": int(a.get("colspan") or 1), "rowspan": int(a.get("rowspan") or 1)}
 
-            df_csv["sumber"] = "bps"
-            df_csv["seri_kode"] = seri_kode
-            df_csv["_berkas_raw"] = rel_path
-            df_csv["_sha256_raw"] = sha_val
-            hasil[kunci_df] = df_csv
+    def handle_endtag(self, tag):
+        if tag in ("td", "th") and self.sel is not None:
+            self.baris[-1].append(self.sel)
+            self.sel = None
 
-        elif file_path.suffix == ".json":
-            with open(file_path, "r", encoding="utf-8") as f:
-                data = json.load(f)
+    def handle_data(self, data):
+        if self.sel is not None:
+            self.sel["teks"] += data
 
-            df_json = _urai_json_bps(data, rel_path, is_hls=("hls" in file_path.name.lower()))
-            df_json["sumber"] = "bps"
-            df_json["seri_kode"] = seri_kode
-            df_json["_berkas_raw"] = rel_path
-            df_json["_sha256_raw"] = sha_val
-            hasil[kunci_df] = df_json
 
+def grid_html(teks):
+    """Tabel HTML -> daftar baris berisi teks sel, dengan colspan/rowspan diratakan ke setiap kolom."""
+    p = _PembacaTabel()
+    p.feed(html.unescape(teks))
+    hasil, tunda = [], {}
+    for sel_baris in p.baris:
+        baris, kol, i = [], 0, 0
+        while i < len(sel_baris) or kol in tunda:
+            if kol in tunda:
+                isi, sisa = tunda.pop(kol)
+                baris.append(isi)
+                if sisa > 1:
+                    tunda[kol] = (isi, sisa - 1)
+                kol += 1
+                continue
+            s = sel_baris[i]
+            i += 1
+            isi = re.sub(r"\s+", " ", s["teks"].replace("\xa0", " ")).strip()
+            for _ in range(s["colspan"]):
+                baris.append(isi)
+                if s["rowspan"] > 1:
+                    tunda[kol] = (isi, s["rowspan"] - 1)
+                kol += 1
+        hasil.append(baris)
     return hasil
+
+
+def angka_html(teks):
+    """'3 156.7' -> 3156.7; '1,234.5' -> 1234.5; '77,94' -> 77.94; '-' atau kosong -> None.
+
+    Ribuan di tabel statis BPS dipisah spasi, jadi koma tanpa titik dibaca sebagai koma desimal
+    (satu tabel bisa mencampur titik dan koma desimal antarkolom)."""
+    t = str(teks).replace(" ", "")
+    if "," in t and "." in t:
+        t = t.replace(",", "")
+    elif "," in t:
+        t = t.replace(",", ".")
+    try:
+        return float(t)
+    except ValueError:
+        return None
+
+
+def baca_json_statis(jalur):
+    """Tabel statis: JSON berisi tabel HTML Excel yang di-escape. Diratakan menjadi tabel panjang:
+    satu baris per (wilayah, kolom), kolom h1..hN = isi baris header bertingkat di atas kolom itu.
+    Baris data = baris yang sel namanya dikenali sebagai wilayah; baris judul, nomor kolom (1), (2), ...,
+    catatan, dan sumber dilewati. Tabel yang terdiri atas beberapa blok bertumpuk (header berulang) dibaca
+    blok demi blok. Nilai '-' dibawa sebagai teks (artinya ditentukan saat menyusun Silver)."""
+    from src import wilayah as W
+    d = json.loads((RAW / jalur).read_text(encoding="utf-8"))["data"]
+    g = grid_html(d["table"])
+
+    def kode(teks):
+        try:
+            return W.dari_nama(teks)
+        except KeyError:
+            return None
+    data = {}
+    for i, r in enumerate(g):
+        for j, c in enumerate(r[:3]):
+            if c and kode(c) is not None:
+                data[i] = (j, kode(c))      # sel nama pertama di baris (nama bisa melebar beberapa kolom)
+                break
+    if not data:
+        raise ValueError(f"{jalur}: tidak ada baris wilayah yang dikenali")
+    # kolom nama = posisi yang paling sering memuat nama wilayah (baris Indonesia bisa melebar ke kolom nomor)
+    posisi = [j for j, _ in data.values()]
+    kol_nama = max(set(posisi), key=posisi.count)
+    data = {i: (kol_nama, kode(g[i][kol_nama])) for i in data if kol_nama < len(g[i]) and kode(g[i][kol_nama]) is not None}
+
+    def baris_header(r):
+        return (len({c for c in r if c}) > 1 and any(c for c in r[kol_nama + 1:])
+                and not re.fullmatch(r"\(\d+\)", r[-1] or ""))
+    # tabel bisa berisi beberapa blok bertumpuk, masing-masing dengan baris header sendiri:
+    # header aktif diganti setiap kali baris header muncul lagi sesudah baris data
+    baris, header, sesudah_data, blok = [], [], False, 0
+    for i, r in enumerate(g):
+        if i in data and data[i][0] == kol_nama:
+            sesudah_data = True
+            for c in range(kol_nama + 1, len(r)):
+                if not r[c]:
+                    continue
+                judul = [h[c] if c < len(h) else "" for h in header]
+                if not judul or any(x == "" for x in judul):
+                    continue
+                baris.append({"wilayah": r[kol_nama], "wilayah_kode": data[i][1], "blok": blok,
+                              **{f"h{n + 1}": x for n, x in enumerate(judul)},
+                              "nilai_teks": r[c], "nilai": angka_html(r[c])})
+        elif i not in data and baris_header(r):
+            if sesudah_data:
+                header, sesudah_data, blok = [], False, blok + 1
+            header.append(r)
+    df = pd.DataFrame(baris)
+    df["_berkas_raw"] = jalur
+    df["_sha256_raw"] = sha256_raw(jalur)
+    meta = pd.DataFrame([{k: d.get(k) for k in ("table_id", "title", "subcsa", "cr_date", "updt_date", "size")}])
+    meta["_berkas_raw"] = jalur
+    meta["tingkat_header"] = len(header)
+    meta["sel_koma_desimal"] = int(df["nilai_teks"].str.fullmatch(r"-?[\d ]+,\d+").sum()) if len(df) else 0
+    meta["blok"] = blok + 1
+    return df, meta
+
+
+def baca_csv(jalur):
+    """Baca satu CSV BPS apa adanya (semua kolom sebagai teks)."""
+    df = pd.read_csv(RAW / jalur, dtype=str, keep_default_na=False, encoding="utf-8")
+    df["_berkas_raw"] = jalur
+    df["_sha256_raw"] = sha256_raw(jalur)
+    return df
+
+
+def baca_manifest_asal(jalur):
+    """manifest_asal.json: catatan unduhan BPS untuk semua tabel (bukan hanya tabel kasus ini)."""
+    isi = json.loads((RAW / jalur).read_text(encoding="utf-8"))
+    baris = [{"tabel": nama, **{k: (",".join(map(str, v)) if isinstance(v, list) else v) for k, v in t.items()}}
+             for nama, t in isi["tabel"].items()]
+    df = pd.DataFrame(baris)
+    df["_berkas_raw"] = jalur
+    return df

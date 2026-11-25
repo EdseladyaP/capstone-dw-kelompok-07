@@ -1,45 +1,47 @@
+"""Pembaca WDI (World Bank API v2): berkas data berisi banyak indikator, dan metadata indikator.
+
+Respons WDI adalah daftar dua unsur: [keterangan halaman, daftar baris]. Seri kasus disaring dengan
+pencocokan kode persis (bukan awalan), karena di berkas yang sama ada kode yang bertetangga,
+misalnya rincian per jenis kelamin. Nilai null dibawa apa adanya; dibuang saat menyusun Silver.
+"""
 import json
-from pathlib import Path
+
 import pandas as pd
-from src.common.manifest import sha256_raw
+
+from src.common.manifest import RAW, sha256_raw
 
 
-def jalankan() -> dict:
-    """
-    Membaca seluruh 4 berkas JSON WDI (data utama & metadata) untuk Kasus 7 (SE.TER.ENRR)
-    dengan mempertahankan struktur/kolom asal serta menempelkan _berkas_raw dan _sha256_raw.
-    """
-    raw_dir = Path("data/raw/wdi")
-    hasil = {}
+def _halaman(jalur):
+    isi = json.loads((RAW / jalur).read_text(encoding="utf-8"))
+    if not (isinstance(isi, list) and len(isi) == 2 and isinstance(isi[0], dict)):
+        raise ValueError(f"{jalur}: bukan respons WDI [keterangan, baris]")
+    ket = isi[0]
+    if int(ket.get("pages", 1)) != 1:
+        raise ValueError(f"{jalur}: respons {ket['pages']} halaman; paket ini mengharapkan satu halaman per berkas")
+    return ket, isi[1] or []
 
-    json_files = sorted(list(raw_dir.glob("**/*.json")))
 
-    for file_path in json_files:
-        rel_path = str(file_path.relative_to("data/raw")).replace("\\", "/")
-        sha_val = sha256_raw(rel_path)
-        kunci_df = f"wdi_{file_path.stem}"
+def baca_data(jalur, seri):
+    """Baris data untuk kode di `seri`. Mengembalikan (DataFrame, jumlah baris di berkas sebelum disaring)."""
+    ket, baris = _halaman(jalur)
+    pilih = [b for b in baris if b["indicator"]["id"] in set(seri)]
+    df = pd.DataFrame([{"indicator_id": b["indicator"]["id"], "indicator_nama": b["indicator"]["value"],
+                        "country_id": b["country"]["id"], "countryiso3code": b.get("countryiso3code"),
+                        "date": b["date"], "value": b["value"], "unit": b.get("unit"),
+                        "obs_status": b.get("obs_status"), "decimal": b.get("decimal")} for b in pilih])
+    df["_lastupdated"] = ket.get("lastupdated")
+    df["_berkas_raw"] = jalur
+    df["_sha256_raw"] = sha256_raw(jalur)
+    return df, len(baris)
 
-        with open(file_path, "r", encoding="utf-8") as f:
-            data = json.load(f)
 
-        # Format API World Bank biasanya berupa list: [header_paging_dict, [list_of_records]]
-        if isinstance(data, list) and len(data) == 2 and isinstance(data[1], list):
-            records = data[1]
-        elif isinstance(data, dict):
-            # Ambil list record di dalam dict jika ada (misal key 'data' atau 'source')
-            list_vals = [v for v in data.values() if isinstance(v, list)]
-            records = list_vals[0] if list_vals else [data]
-        elif isinstance(data, list):
-            records = data
-        else:
-            records = [data]
-
-        df_wdi = pd.json_normalize(records)
-        df_wdi["sumber"] = "wdi"
-        df_wdi["seri_kode"] = "SE.TER.ENRR" if "metadata" not in file_path.parts else "wdi_metadata"
-        df_wdi["_berkas_raw"] = rel_path
-        df_wdi["_sha256_raw"] = sha_val
-
-        hasil[kunci_df] = df_wdi
-
-    return hasil
+def baca_metadata(jalur, seri=None):
+    """Metadata indikator (metadata/sumberN_indikator.json) atau daftar sumber (metadata/sumber.json)."""
+    _, baris = _halaman(jalur)
+    if seri is not None:
+        baris = [b for b in baris if b.get("id") in set(seri)]
+    df = pd.DataFrame([{k: (v.get("value") if isinstance(v, dict) else
+                            (json.dumps(v, ensure_ascii=False) if isinstance(v, list) else v))
+                        for k, v in b.items()} for b in baris])
+    df["_berkas_raw"] = jalur
+    return df

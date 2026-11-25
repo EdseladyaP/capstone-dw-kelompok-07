@@ -189,6 +189,11 @@ def _periode_teks(tahun: list[int]) -> str:
     return ";".join(str(t) for t in tahun)
 
 
+def _tahun_dari_teks(teks) -> set[int]:
+    """'2015;2016;2017' -> {2015, 2016, 2017}; kolom kosong -> himpunan kosong."""
+    return {int(t) for t in str(teks).split(";") if t.strip()}
+
+
 def profil_wdi(wdi: pd.DataFrame, meta_wdi: dict) -> tuple[list[dict], list[dict]]:
     ringkas: list[dict] = []
     panjang: list[dict] = []
@@ -218,6 +223,8 @@ def profil_wdi(wdi: pd.DataFrame, meta_wdi: dict) -> tuple[list[dict], list[dict
                 "periode_awal": min(tahun_ada),
                 "periode_akhir": max(tahun_ada),
                 "jumlah_periode": len(tahun_ada),
+                "baris_ada": len(sub),
+                "nilai_ada": len(tahun_ada),
                 "periode_tersedia": _periode_teks(tahun_ada),
                 "periode_hilang": _periode_teks(tahun_hilang),
                 "tahun_terbit": "UIS/UNESCO dipublikasi 2026-02; snapshot WDI 2026-10-20",
@@ -267,6 +274,8 @@ def profil_wdi(wdi: pd.DataFrame, meta_wdi: dict) -> tuple[list[dict], list[dict
                 "periode_awal": "",
                 "periode_akhir": "",
                 "jumlah_periode": 0,
+                "baris_ada": "",
+                "nilai_ada": "",
                 "periode_tersedia": "",
                 "periode_hilang": "",
                 "tahun_terbit": "UIS/UNESCO dipublikasi 2026-02; snapshot WDI 2026-10-20",
@@ -314,6 +323,8 @@ def profil_bps(meta_bps: dict) -> tuple[list[dict], list[dict]]:
                     "periode_awal": min(tahun_ada),
                     "periode_akhir": max(tahun_ada),
                     "jumlah_periode": len(tahun_ada),
+                    "baris_ada": len(grup),
+                    "nilai_ada": int(grup["nilai"].notna().sum()),
                     "periode_tersedia": _periode_teks(tahun_ada),
                     "periode_hilang": _periode_teks(tahun_hilang),
                     "tahun_terbit": md.get("last_update", ""),
@@ -365,6 +376,37 @@ def hitung_irisan(ringkas: pd.DataFrame) -> dict:
     }
 
 
+def tambah_kolom_irisan(ringkas: pd.DataFrame) -> pd.DataFrame:
+    """Tambahkan tahun beririsan dari `periode_tersedia` (bukan dikarang).
+
+    - tahun_survei_utama_tersedia: tahun pembanding yang juga diterbitkan salah satu seri utama BPS
+      (gabungan tahun semua seri utama), menjawab "tahun berapa saja pembanding beririsan".
+    - pasangan_tahun_irisan: tahun irisan dengan seri pasangan pada baris berkandidat YA.
+    """
+    tersedia = ringkas[ringkas["rincian"] != "(tidak tersedia di sumber)"]
+    utama = tersedia[tersedia["peran"] == "utama"]
+    tahun_utama = set().union(*[_tahun_dari_teks(t) for t in utama["periode_tersedia"]]) if len(utama) else set()
+
+    survei, pasangan = [], []
+    for _, r in ringkas.iterrows():
+        if r["rincian"] == "(tidak tersedia di sumber)":
+            survei.append("")
+            pasangan.append("")
+            continue
+        tahun_baris = _tahun_dari_teks(r["periode_tersedia"])
+        survei.append(_periode_teks(sorted(tahun_baris & tahun_utama)) if r["peran"] == "pembanding" else "")
+        if r["kandidat_sebanding"] == "YA" and r["pasangan_seri_utama"] not in ("", "-"):
+            lawan = tersedia[tersedia["seri_kode"] == r["pasangan_seri_utama"]]
+            tahun_lawan = set().union(*[_tahun_dari_teks(t) for t in lawan["periode_tersedia"]]) if len(lawan) else set()
+            pasangan.append(_periode_teks(sorted(tahun_baris & tahun_lawan)))
+        else:
+            pasangan.append("")
+    ringkas = ringkas.copy()
+    ringkas["tahun_survei_utama_tersedia"] = survei
+    ringkas["pasangan_tahun_irisan"] = pasangan
+    return ringkas
+
+
 def main() -> None:
     DOCS.mkdir(parents=True, exist_ok=True)
 
@@ -378,11 +420,21 @@ def main() -> None:
     ringkas = pd.DataFrame(ringkas_wdi + ringkas_bps)
     panjang = pd.DataFrame(panjang_wdi + panjang_bps)
     panjang = panjang.sort_values(["sumber", "seri_kode", "dimensi_rincian", "rincian", "periode"])
+    ringkas = tambah_kolom_irisan(ringkas)
+
+    urutan = [
+        "sumber", "seri_kode", "nama_seri", "peran", "cakupan_wilayah", "dimensi_rincian", "rincian", "satuan",
+        "periode_awal", "periode_akhir", "jumlah_periode", "baris_ada", "nilai_ada",
+        "periode_tersedia", "periode_hilang", "tahun_survei_utama_tersedia",
+        "tahun_terbit", "berkas_raw", "kandidat_sebanding", "pasangan_seri_utama", "pasangan_tahun_irisan",
+        "alasan", "sumber_organisasi",
+    ]
+    ringkas = ringkas[urutan]
 
     keluar_ringkas = DOCS / "tabel_ketersediaan_seri_pembanding.csv"
     keluar_panjang = DOCS / "ketersediaan_seri_periode_rincian.csv"
-    ringkas.to_csv(keluar_ringkas, index=False)
-    panjang.to_csv(keluar_panjang, index=False)
+    ringkas.to_csv(keluar_ringkas, index=False, lineterminator="\n")
+    panjang.to_csv(keluar_panjang, index=False, lineterminator="\n")
 
     irisan = hitung_irisan(ringkas)
     print("=== PROFIL SERI PEMBANDING SE.TER.ENRR (NIM 124450043) ===")
@@ -391,7 +443,7 @@ def main() -> None:
     print(f"Seri x periode    : {keluar_panjang.relative_to(ROOT).as_posix()} ({len(panjang)} baris)")
     print("--- Ringkasan ketersediaan ---")
     kolom = ["sumber", "seri_kode", "rincian", "periode_awal", "periode_akhir",
-             "jumlah_periode", "kandidat_sebanding"]
+             "jumlah_periode", "baris_ada", "nilai_ada", "kandidat_sebanding", "pasangan_tahun_irisan"]
     print(ringkas[kolom].to_string(index=False))
     print("--- Irisan periode dengan seri utama ---")
     print(irisan)
