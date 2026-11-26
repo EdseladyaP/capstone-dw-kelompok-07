@@ -5,8 +5,10 @@ import numpy as np
 import pandas as pd
 import pandera.pandas as pa
 
+from src import konfigurasi as K
 from src.common.hasil import tulis_hasil
 from src.dokumen import tulis_data_dictionary
+from src.dokumen_gold import tulis_dokumen_gold
 from src.laporan import angka, catat, simpan_angka, tabel_md, tulis
 from src.validasi import aturan, khusus
 
@@ -91,6 +93,29 @@ def _cek_rentang_detail(df):
     return bool((persen >= 0).all() and tahun.between(0, 30).all())
 
 
+def _validasi_nasional(nasional):
+    """Tabel nasional Gold: unik, lengkap, berasal dari sumber yang jelas, dan punya lineage."""
+    if nasional is None:
+        raise ValueError("Tabel nasional Gold tidak dibuat oleh pipeline.")
+    wajib = [
+        "seri_kode", "rincian", "sumber", "periode", "jenis_periode", "nilai", "satuan",
+        "asal", "catatan", "_berkas_raw", "_sha256_raw",
+    ]
+    _cek_kolom(nasional, wajib)
+    if nasional.duplicated(["seri_kode", "rincian", "periode"]).any():
+        raise ValueError("Tabel nasional memiliki seri + rincian + periode ganda.")
+    diharapkan = set(K.SERI_UTAMA) | set(K.SERI_PEMBANDING)
+    if not diharapkan.issubset(set(nasional["seri_kode"].dropna())):
+        raise ValueError("Seri utama atau pembanding tidak lengkap di tabel nasional.")
+    if not nasional["asal"].isin({"baris_indonesia", "pembanding", "agregat"}).all():
+        raise ValueError("Kolom asal memuat kategori di luar baris_indonesia/pembanding/agregat.")
+    if nasional["_berkas_raw"].isna().any() or (nasional["_berkas_raw"].astype(str).str.strip() == "").any():
+        raise ValueError("Ada baris nasional tanpa _berkas_raw.")
+    if nasional["nilai"].isna().any():
+        raise ValueError("Ada baris nasional tanpa nilai.")
+    return True
+
+
 def _validasi_gold(gold):
     hasil = []
 
@@ -114,6 +139,7 @@ def _validasi_gold(gold):
     panel = gold["panel_provinsi_tahun"]
     detail = gold["panel_indikator_gold"]
     anomali = gold["anomali_gold"]
+    nasional = gold.get("nasional_gold")
 
     def validasi_panel():
         _cek_kolom(panel, KOLOM_PANEL)
@@ -172,6 +198,7 @@ def _validasi_gold(gold):
     periksa("Struktur dan kelengkapan panel Gold", validasi_panel)
     periksa("Struktur dan rentang detail Gold", validasi_detail)
     periksa("Konsistensi catatan anomali Gold", validasi_anomali)
+    periksa("Tabel nasional Gold: kunci, asal, dan lineage", lambda: _validasi_nasional(nasional))
 
     return hasil
 
@@ -253,10 +280,12 @@ def jalankan(silver, gold):
         f"- Baris panel: {len(gold['panel_provinsi_tahun'])}",
         f"- Baris detail: {len(gold['panel_indikator_gold'])}",
         f"- Baris anomali: {len(gold['anomali_gold'])}",
+        f"- Baris tabel nasional: {len(gold['nasional_gold']) if 'nasional_gold' in gold else 0}",
     ]))
 
     # Dokumentasi dan metrics dari main.
     tulis_data_dictionary(silver)
+    tulis_dokumen_gold(gold)
     simpan_angka()
 
     a = angka()

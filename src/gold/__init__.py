@@ -2,9 +2,14 @@
 """Aturan Tahap 19: pemilihan satu nilai per sel dan pembentukan panel Gold."""
 
 from pathlib import Path
+import csv
+import io
 import re
 
 import pandas as pd
+
+from src import konfigurasi as K
+from src.gold import muat_sql, nasional, nasional_gold
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -23,6 +28,18 @@ KOLOM_KUNCI = [
     "jenis_periode",
     "rincian",
 ]
+
+
+def _kategori_ke_rincian(kategori):
+    """Terjemahkan label turvar mentah di berkas anomali ke rincian baku Silver."""
+    kat = str(kategori).strip()
+    if kat.casefold() in {x.casefold() for x in K.RINCIAN_TOTAL_BPS | {"Tidak ada"}}:
+        return "total"
+    for _, (dimensi, kamus) in K.RINCIAN_BPS.items():
+        for label, kode in kamus.items():
+            if kat == label:
+                return f"{dimensi}={kode}"
+    return kat
 
 
 def _pilih_snapshot(silver):
@@ -140,11 +157,12 @@ def _buat_panel(silver):
         data["periode"], errors="raise"
     ).astype(int)
 
-    # Indikator utama hanya memakai rincian agregat.
-    rincian_lain = data[data["rincian"] != "Tidak ada"]
+    # Indikator utama hanya memakai rincian agregat. Silver menulisnya 'total',
+    # bukan 'Tidak ada' (label turvar mentah diterjemahkan di src/silver/).
+    rincian_lain = data[data["rincian"] != "total"]
     if not rincian_lain.empty:
         raise ValueError(
-            "Ditemukan rincian selain 'Tidak ada' pada indikator utama. "
+            "Ditemukan rincian selain 'total' pada indikator utama. "
             "Tinjau kesetaraan rincian sebelum masuk panel Gold."
         )
 
@@ -192,7 +210,9 @@ def _bawa_anomali(detail, silver):
             "reports/klasifikasi_anomali.csv"
         )
 
-    anomali = pd.read_csv(file_anomali)
+    # Berkas cara lama memakai BOM dan label turvar mentah ('Tidak ada', 'SD/sederajat', ...).
+    anomali = pd.read_csv(file_anomali, encoding="utf-8-sig")
+    anomali["kategori"] = anomali["kategori"].map(_kategori_ke_rincian)
 
     anomali["tahun"] = pd.to_numeric(
         anomali["tahun"], errors="raise"
@@ -327,27 +347,27 @@ def _buat_panel_lebar(detail):
 
 
 def _catat_keputusan(baris):
-    """Tambahkan keputusan Gold satu kali agar pipeline dapat diulang."""
+    """Tambahkan keputusan Gold satu kali; BOM dan isi log lama tidak ditulis ulang."""
     jalur = ROOT / "log-keputusan.csv"
-
+    lama = jalur.read_bytes() if jalur.exists() else b""
+    ada = {r.get("id") for r in csv.DictReader(io.StringIO(lama.decode("utf-8-sig")))}
     kolom = [
         "id", "tanggal", "nim", "tahap", "seri_kode",
         "keputusan", "alternatif_ditolak", "alasan", "dampak_baris"
     ]
-
-    if jalur.exists():
-        log = pd.read_csv(jalur, dtype=str)
-    else:
-        log = pd.DataFrame(columns=kolom)
-
-    for entri in baris:
-        if entri["id"] not in log["id"].astype(str).tolist():
-            log = pd.concat(
-                [log, pd.DataFrame([entri])],
-                ignore_index=True
-            )
-
-    log.to_csv(jalur, index=False)
+    baru = [e for e in baris if e["id"] not in ada]
+    if not baru:
+        return
+    keluaran = io.StringIO()
+    penulis = csv.writer(keluaran, lineterminator="\n")
+    for entri in baru:
+        penulis.writerow([entri[k] for k in kolom])
+    with jalur.open("ab") as f:
+        if not lama:
+            f.write(b"\xef\xbb\xbf")
+        elif not lama.endswith(b"\n"):
+            f.write(b"\n")
+        f.write(keluaran.getvalue().encode("utf-8"))
 
 
 def jalankan(silver):
@@ -385,6 +405,13 @@ def jalankan(silver):
         folder / "audit_snapshot_gold.parquet", index=False
     )
 
+    # Tahap 5–6: pertahankan artefak Sprint 1 dan buat tabel nasional Gold.
+    # Modul lama sebelumnya dijalankan manual, sehingga angka di reports/angka.json
+    # tidak bisa diulang dari pipeline. Memanggilnya di sini menyatukan reproduksi.
+    nasional.jalankan(silver)          # tabel nasional lebar + pasangan rekonsiliasi
+    muat_sql.jalankan(silver)          # Silver di DuckDB (berkas di-gitignore)
+    tabel_nasional = nasional_gold.jalankan(silver)
+
     jumlah_baris_dipilih = len(
         terpilih[terpilih["seri_kode"].isin(SERI_PANEL)
                  & (terpilih["wilayah_kode"] != 9999)]
@@ -397,7 +424,7 @@ def jalankan(silver):
     tanggal = "2026-11-24"
     keputusan = [
         {
-            "id": "K-018",
+            "id": "K-037",
             "tanggal": tanggal,
             "nim": "124450078",
             "tahap": "gold",
@@ -408,18 +435,18 @@ def jalankan(silver):
             "dampak_baris": str(jumlah_snapshot_tidak_dipilih),
         },
         {
-            "id": "K-019",
+            "id": "K-038",
             "tanggal": tanggal,
             "nim": "124450078",
             "tahap": "gold",
             "seri_kode": "var1443;var417;var1429",
-            "keputusan": "Panel provinsi hanya memuat APK PT, HLS, dan RLS dengan rincian Tidak ada; indikator lain serta wilayah nasional tidak dicampurkan ke panel",
+            "keputusan": "Panel provinsi hanya memuat APK PT, HLS, dan RLS dengan rincian total; indikator lain serta wilayah nasional tidak dicampurkan ke panel",
             "alternatif_ditolak": "Menggabungkan semua seri dan rincian ke satu kolom nilai",
             "alasan": "Menjaga konstruk indikator, wilayah, dan satuan tetap terpisah",
             "dampak_baris": str(jumlah_di_luar_panel),
         },
         {
-            "id": "K-020",
+            "id": "K-039",
             "tanggal": tanggal,
             "nim": "124450078",
             "tahap": "gold",
@@ -430,7 +457,7 @@ def jalankan(silver):
             "dampak_baris": "0",
         },
         {
-            "id": "K-021",
+            "id": "K-040",
             "tanggal": tanggal,
             "nim": "124450078",
             "tahap": "gold",
@@ -450,10 +477,12 @@ def jalankan(silver):
     print("Klasifikasi anomali:", len(audit_anomali))
     print("Snapshot tidak dipilih:", jumlah_snapshot_tidak_dipilih)
     print("Baris Silver di luar panel utama:", jumlah_di_luar_panel)
+    print("Baris tabel nasional Gold:", len(tabel_nasional))
 
     return {
         "panel_provinsi_tahun": panel,
         "panel_indikator_gold": detail,
         "anomali_gold": audit_anomali,
         "audit_snapshot_gold": audit_snapshot,
+        "nasional_gold": tabel_nasional,
     }
