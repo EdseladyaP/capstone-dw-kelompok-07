@@ -98,7 +98,25 @@ def _pilih_snapshot(silver):
         columns=["_tanggal_snapshot"]
     ).reset_index(drop=True)
 
-    audit_snapshot = pd.DataFrame(audit)
+    audit_snapshot = pd.DataFrame(audit, columns=[
+        "seri_kode",
+        "wilayah_kode",
+        "periode",
+        "rincian",
+        "jumlah_baris_snapshot",
+        "jumlah_baris_tidak_dipilih",
+        "snapshot_dipilih",
+        "nilai_dipilih",
+    ]).astype({
+        "seri_kode": "string",
+        "wilayah_kode": "int64",
+        "periode": "string",
+        "rincian": "string",
+        "jumlah_baris_snapshot": "int64",
+        "jumlah_baris_tidak_dipilih": "int64",
+        "snapshot_dipilih": "string",
+        "nilai_dipilih": "float64",
+    })
 
     kunci_gold = [
         "seri_kode", "wilayah_kode", "periode", "rincian"
@@ -408,9 +426,18 @@ def jalankan(silver):
     # Tahap 5–6: pertahankan artefak Sprint 1 dan buat tabel nasional Gold.
     # Modul lama sebelumnya dijalankan manual, sehingga angka di reports/angka.json
     # tidak bisa diulang dari pipeline. Memanggilnya di sini menyatukan reproduksi.
-    nasional.jalankan(silver)          # tabel nasional lebar + pasangan rekonsiliasi
-    muat_sql.jalankan(silver)          # Silver di DuckDB (berkas di-gitignore)
+    hasil_nasional = nasional.jalankan(silver)
     tabel_nasional = nasional_gold.jalankan(silver)
+
+    data_gold_sql = {
+        "panel_provinsi_tahun": panel,
+        "panel_indikator_gold": detail,
+        "anomali_gold": audit_anomali,
+        "audit_snapshot_gold": audit_snapshot,
+        "nasional_gold": tabel_nasional,
+    }
+
+    muat_sql.jalankan(silver, data_gold_sql, hasil_nasional)
 
     jumlah_baris_dipilih = len(
         terpilih[terpilih["seri_kode"].isin(SERI_PANEL)

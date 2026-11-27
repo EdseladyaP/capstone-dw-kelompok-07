@@ -7,8 +7,79 @@ dan `log-keputusan.csv` yang sudah di-*commit*.
 Kasus, seri yang ditangani, dan satu kalimat temuan utama tentang kualitas datanya.
 
 ## Data dan lineage
-Sumber dan format mentah, jumlah berkas, cara `_berkas_raw`/`_sha256_raw` dibentuk, dan hasil tarik
-ulang API (bila dilakukan): apa yang berubah sejak snapshot 17–20 Oktober 2026.
+
+### Data mentah dan pelacakan sumber
+
+Pipeline menggunakan 15 berkas mentah yang tercatat dan cocok dengan
+`data/raw/MANIFEST.csv`. Data berasal dari sumber statistik yang digunakan
+dalam kasus ini, antara lain BPS, World Development Indicators (WDI),
+ILOSTAT, WHO, dan BNPB. Berkas mentah dipertahankan sebagai sumber bukti
+sebelum dilakukan transformasi ke Silver.
+
+Setiap baris Silver membawa dua atribut lineage:
+
+- `_berkas_raw`: jalur relatif berkas asal terhadap direktori `data/raw/`.
+  Atribut ini diisi oleh pembaca ekstraksi sehingga setiap observasi dapat
+  ditelusuri kembali ke berkas sumbernya.
+- `_sha256_raw`: sidik hash SHA-256 isi berkas, dihitung melalui fungsi
+  `sha256_raw()` pada `src/common/manifest.py`. Nilainya dicocokkan dengan
+  hash pada `MANIFEST.csv` untuk memeriksa konsistensi berkas sumber.
+
+Dengan demikian, lineage tidak hanya menunjukkan nama berkas, tetapi juga
+memungkinkan pemeriksaan apakah isi berkas yang digunakan sesuai dengan
+snapshot yang tercatat. Kunci baris Silver turut memasukkan `_berkas_raw`
+agar observasi dari berkas sumber berbeda tetap dapat dibedakan.
+
+Snapshot mentah yang digunakan dalam reproduksi ini berada pada rentang
+17?20 Oktober 2026. Pipeline dijalankan ulang dari berkas yang sudah tersedia
+di repositori. Tidak ada klaim perubahan data akibat penarikan API baru pada
+proses reproduksi ini.
+
+### Penyimpanan SQL untuk Silver dan Gold
+
+Penyimpanan analitis menggunakan DuckDB. DDL berada di
+`src/gold/silver.sql`, sedangkan proses pemuatan dan pemeriksaan jumlah baris
+berada di `src/gold/muat_sql.py`. Pemuatan tersebut terintegrasi dengan tahap
+Gold pada `pipeline.py`, sehingga database dibangun kembali ketika pipeline
+dijalankan.
+
+Tabel yang dibuat meliputi `seri`, `silver`, `panel_provinsi_tahun`,
+`panel_indikator_gold`, `anomali_gold`, `audit_snapshot_gold`, `nasional`,
+`nasional_gold`, dan `pasangan_rekonsiliasi`. Setiap tabel memiliki primary
+key, dengan tipe data kolom yang ditentukan secara eksplisit. Relasi seri
+pada tabel Silver dan nasional juga menggunakan foreign key ke tabel `seri`.
+
+Hasil reproduksi menghasilkan 4.216 baris Silver, 608 baris panel provinsi
+per tahun, 1.444 baris detail indikator, 140 baris klasifikasi anomali,
+172 baris tabel nasional Gold, dan 2 pasangan rekonsiliasi. Tabel
+`audit_snapshot_gold` memiliki 0 baris pada hasil ini. Jumlah baris keenam
+tabel yang memiliki pasangan berkas Parquet telah dibandingkan langsung
+antara DuckDB dan Parquet; seluruhnya sesuai.
+
+Berkas database dibangun di `data/gold/gudang.duckdb` dan tidak perlu
+dimasukkan ke Git karena dapat direproduksi melalui `python pipeline.py`.
+DDL dan kode pembentukannya tetap disimpan di repositori.
+
+### Alasan pemilihan DuckDB dibandingkan penyimpanan JSON
+
+JSON merupakan format dokumen yang sesuai untuk menyimpan data mentah,
+terutama ketika struktur sumber berbeda-beda atau memiliki objek dan atribut
+bersarang. JSON mempertahankan bentuk data dari sumber dan berguna sebagai
+arsip serta bukti ekstraksi. Namun, untuk analisis lintas seri, wilayah,
+periode, dan sumber, data perlu dibaca, ditransformasikan, dan diperiksa
+dengan struktur kolom yang konsisten.
+
+DuckDB dipilih untuk lapisan analitis Silver dan Gold karena mendukung tabel
+relasional dengan tipe data eksplisit, primary key, foreign key, dan
+constraint. SQL memudahkan proses filter, join, agregasi, serta pemeriksaan
+kualitas dan jumlah baris. DuckDB juga dapat bekerja secara embedded tanpa
+memerlukan server database terpisah dan mendukung pembacaan maupun analisis
+Parquet secara langsung.
+
+Dengan demikian, JSON tetap digunakan untuk mempertahankan data mentah,
+sedangkan DuckDB digunakan untuk menyimpan data terstruktur yang telah
+dibersihkan dan diolah. Keduanya memiliki fungsi berbeda dan saling
+melengkapi dalam pipeline data.
 
 ## Masalah data dan penanganannya
 
