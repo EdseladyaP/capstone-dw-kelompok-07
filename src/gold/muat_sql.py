@@ -47,6 +47,11 @@ KOLOM = {
         "rujukan_tahun", "asal", "catatan", "_berkas_raw",
         "_sha256_raw",
     ],
+    "rekonsiliasi_nasional": [
+        "id", "periode", "seri_utama", "nilai_utama",
+        "seri_pembanding", "nilai_pembanding", "selisih",
+        "status_pasangan", "kategori", "dugaan", "bukti",
+    ],
 }
 
 KOLOM_NASIONAL = [
@@ -153,6 +158,7 @@ def jalankan(silver, data_gold, hasil_nasional):
             "nasional": len(nas),
             "nasional_gold": len(data_gold["nasional_gold"]),
             "pasangan_rekonsiliasi": len(pasangan),
+            "rekonsiliasi_nasional": len(data_gold["rekonsiliasi_nasional"]),
         }
 
         for nama, ekspektasi in pembanding.items():
