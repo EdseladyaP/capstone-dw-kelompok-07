@@ -1,8 +1,14 @@
 {
   "metrik": {
-    "jumlah_berkas_manifest": 15
+    "berkas_dibaca": 15,
+    "baris_mentah": 24726,
+    "format": 2,
+    "baris_nasional_gold": 172,
+    "seri_nasional_gold": 6,
+    "nasional_baris_indonesia": 119,
+    "nasional_pembanding": 53
   },
   "seed": 0,
   "data_hash": "47a36c7c376bfc28458f66b5b1370271ed253205e4c57fd7c1c748c4849a438e",
-  "perangkat": "Windows AMD64 Python 3.13.14"
+  "perangkat": "Linux x86_64 Python 3.12.16"
 }
