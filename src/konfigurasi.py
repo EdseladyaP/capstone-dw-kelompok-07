@@ -89,6 +89,16 @@ RENTANG = {"persen": (0, 100), APK: (0, 250), "tahun": (0, 25)}
 
 ANOMALI = {"k_iqr": 1.5, "min_titik_samping": 6, "lompat_relatif": 0.20, "porsi_patahan": 0.70}
 
+# Sprint 2 / tahap 6 — cakupan tabel nasional Gold: kelima seri utama dan satu pembanding.
+SERI_UTAMA = ("var303", "var1443", "var2685", "var417", "var1429")
+SERI_PEMBANDING = ("SE.TER.ENRR",)
+
+# Agregasi provinsi hanya sah bila ada bobot penduduk yang sesuai definisi indikator.
+# Paket kasus 07 tidak memuat bobot itu; rata-rata provinsi tanpa bobot ditolak (K-042).
+# Bentuk entri bila suatu hari bobot tersedia:
+#   {"var1429": {"rincian": "total", "bobot": "penduduk_15_plus", "alasan": "..."}}
+GOLD_AGREGAT = {}
+
 PASANGAN = [
     dict(id="P1", judul="APK perguruan tinggi: BPS (umur 19–23) vs WDI (umur resmi jenjang tersier)",
          utama="var1443", rincian_utama="total", pembanding=[("SE.TER.ENRR", "total")],

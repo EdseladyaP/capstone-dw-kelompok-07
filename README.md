@@ -32,10 +32,10 @@ src/common/            milik starter — jangan diubah: manifest (lineage sha256
                        hasil (results/<nim>/metrics.json untuk bukti artefak di Workbench)
 src/ekstraksi/         tahap 1: pembaca tiap format
 src/silver/            tahap 2–4: profil, pembersihan, penyeragaman
-src/gold/              tahap 4–6: reshape panel, integrasi pembanding, penyimpanan SQL
+src/gold/              tahap 4–6: reshape panel, integrasi pembanding, tabel nasional Gold, penyimpanan SQL
 src/skala/             tahap 7: arsip WDI 142 rilis (buat sendiri)
 src/validasi/          tahap 8: skema pandera/Great Expectations
-data/silver/, data/gold/   keluaran (boleh di-commit bila < 20 MB)
+data/silver/, data/gold/   keluaran (boleh di-commit bila < 20 MB); nasional.parquet = tabel nasional Gold
 log-keputusan.csv      setiap keputusan wrangling: apa, alternatif yang ditolak, alasan, dampak baris
 docs/data-dictionary.md    kamus data Silver dan Gold
 results/<nim>/metrics.json   angka hasil komponen Anda: python -m src.common.hasil <nim> nama=angka ...
@@ -51,7 +51,7 @@ reports/tim.md, reports/individu/<nim>.md, AI_LOG.md
 | 3. Pembersihan | IV–VI | Strategi missing, penanganan outlier dan patahan seri, deduplikasi, format periode dan wilayah |
 | 4. Transformasi | VII, IX | Normalisasi/standarisasi, encoding rincian, reshape ke panel |
 | 5. Penyimpanan | XI | Silver dan Gold di SQL; mentah sebagai dokumen; alasan pilihannya |
-| 6. Integrasi | XII | Seri utama + pembanding nasional; selisih dijelaskan, bukan dihapus |
+| 6. Integrasi | XII | Seri utama + pembanding nasional; selisih dijelaskan, bukan dihapus; tabel nasional Gold di `data/gold/nasional.parquet` dengan kolom `asal` dan `_berkas_raw` |
 | 7. Skala | XIII | `python unduh_data.py --arsip-wdi`; revisi seri pembanding antar-142 rilis; pandas vs DuckDB/Dask |
 | 8. Dokumentasi dan validasi | XIV–XV | Lineage ke berkas mentah, data dictionary, skema validasi otomatis |
 
@@ -67,6 +67,11 @@ reports/tim.md, reports/individu/<nim>.md, AI_LOG.md
 - **Lineage**: `_sha256_raw` diambil dari `src.common.manifest.sha256_raw`, tidak ditulis tangan.
 - **Satu perintah**: `python pipeline.py` dari `data/raw/` yang baru diunduh harus menghasilkan
   ulang Silver dan Gold yang di-commit.
+- **Tabel nasional Gold** (`src/gold/nasional_gold.py` → `data/gold/nasional.parquet`): satu baris
+  per `seri × rincian × periode` untuk `var303`, `var1443`, `var2685`, `var417`, `var1429`, dan
+  `SE.TER.ENRR`. Kolom `asal` bernilai `baris_indonesia`, `pembanding`, atau `agregat`; agregat
+  provinsi hanya dibuat bila ada bobot yang sah (`K.GOLD_AGREGAT`). Setiap baris menyimpan
+  `_berkas_raw`. Ringkasan dan aturan per seri ada di `reports/tabel-nasional-gold.md`.
 
 ## Pembagian peran yang disarankan
 

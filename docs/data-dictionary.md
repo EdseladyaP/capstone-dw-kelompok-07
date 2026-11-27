@@ -2,7 +2,7 @@
 
 Ditulis ulang otomatis oleh `python pipeline.py` (`src/dokumen.py`). Tipe, rentang, dan jumlah kosong dihitung dari `data/silver/silver.parquet`.
 
-Dokumen ini mendaftarkan **setiap kolom Silver** dengan nama, tipe, satuan/format, arti, dan asal (berkas mentah atau keputusan di `log-keputusan.csv`). Kolom Gold ditambahkan pada Sprint 2–3.
+Dokumen ini mendaftarkan **setiap kolom Silver** dengan nama, tipe, satuan/format, arti, dan asal (berkas mentah atau keputusan di `log-keputusan.csv`). Dokumentasi Gold tersedia pada bagian Data Dictionary Gold di bawah ini.
 
 ## data/silver/silver.parquet (4,216 baris)
 
@@ -78,3 +78,72 @@ Contoh baris Silver berikut ditelusuri sampai berkas mentahnya dan dicocokkan de
 3. sha256 isi berkas mentah dihitung ulang juga `bc081b82fe1fa9326027434b5e883f1ef14d4c30efab6a34b87e379b2f642689`; hasilnya sama dengan `_sha256_raw`. Jadi berkas yang dibaca benar-benar berkas yang tercatat.
 
 4. Di berkas mentah JSON BPS, angka 9.32 ada pada kunci `datacontent` `1100142901150` = wilayah 1100 + var 1429 + turvar 'Tidak ada' + tahun 2015 + turtahun 'Tahun'.
+
+## Data Dictionary Gold
+
+### panel_provinsi_tahun
+
+| Kolom | Keterangan |
+|---|---|
+| wilayah_id | Kode provinsi |
+| nama_wilayah | Nama baku provinsi |
+| tahun | Tahun observasi |
+| rata_rata_lama_sekolah_tahun | Rata-rata lama sekolah, satuan tahun |
+| apk_perguruan_tinggi_persen | APK perguruan tinggi, satuan persen |
+| harapan_lama_sekolah_tahun | Harapan lama sekolah, satuan tahun |
+| status_* | Status ketersediaan nilai indikator |
+| outlier_* | Penanda outlier asli |
+
+### panel_indikator_gold
+
+Berisi observasi detail tiga indikator utama: var1429 (RLS), var1443 (APK perguruan tinggi), dan var417 (HLS).
+
+Kolom nilai menyimpan nilai observasi sesuai satuannya. Kolom outlier_asli menunjukkan apakah observasi termasuk anomali yang dipertahankan.
+
+### anomali_gold
+
+Menyimpan hasil klasifikasi anomali, nilai Silver, batas IQR, verifikasi sumber, dan tindakan.
+
+### audit_snapshot_gold
+
+Menyimpan catatan snapshot yang tidak dipilih ketika terdapat lebih dari satu snapshot.
+
+### nasional.parquet
+
+Tabel nasional Gold dijelaskan lebih lanjut pada bagian yang dihasilkan `src/gold/nasional_gold.py`
+(kolom `asal`, `catatan`, dan `_berkas_raw`).
+
+## Aturan Satuan dan Wilayah Gold
+
+- Persen memiliki rentang 0 sampai 100.
+- Lama sekolah dalam tahun memiliki rentang 0 sampai 30.
+- Panel utama berisi 38 provinsi.
+- Kode nasional 9999 tidak dimasukkan ke panel provinsi.
+- Nilai kosong tidak otomatis diganti dengan nol.
+- Penanda outlier asli tetap dipertahankan.
+
+
+## data/gold/nasional.parquet (tabel nasional Gold)
+
+Ditulis ulang oleh `python pipeline.py` (`src/gold/nasional_gold.py`). Satu baris = satu seri x rincian x periode; kunci unik `seri_kode` + `rincian` + `periode`.
+
+| kolom | tipe | asal | arti |
+|---|---|---|---|
+| seri_kode | str | K.SERI_UTAMA, K.SERI_PEMBANDING | identitas seri utama BPS atau pembanding WDI |
+| rincian | str | rincian baku Silver (jenjang/umur/total) | bagian dari kunci; jenjang dan umur tidak dijumlah |
+| sumber | str | src/ekstraksi; Silver | lembaga penerbit: bps atau wdi |
+| periode | str | periode Silver | tahun, atau tahun-S1/-Q3/-bulan sesuai sumber |
+| jenis_periode | str | periode Silver | jenis periode asli; tidak diagregasi otomatis |
+| nilai | float64 | nilai Silver pada wilayah 9999 | angka nasional sesuai satuan seri |
+| satuan | str | src/konfigurasi.py; Silver | persen_apk, persen, atau tahun; APK boleh melebihi 100 |
+| batas_bawah | float64 | Silver (WHO; kosong untuk kasus 07) | batas bawah ketidakpastian bila tersedia |
+| batas_atas | float64 | Silver (WHO; kosong untuk kasus 07) | batas atas ketidakpastian bila tersedia |
+| rujukan_tahun | Int64 | var.note BPS di Silver | lebar jendela rujukan survei; kosong bila tidak berlaku |
+| asal | str | src/gold/nasional_gold.py | baris_indonesia \| pembanding \| agregat; sumber angka nasional |
+| catatan | str | src/gold/nasional_gold.py; log K-042 | aturan pemilihan baris dan alasan tidak ada agregat |
+| _berkas_raw | str | pembaca ekstraksi; Silver | lineage: berkas asal baris ini (wajib ada di setiap baris Gold) |
+| _sha256_raw | str | src.common.manifest.sha256_raw | sidik berkas asal; kosong hanya pada baris agregat |
+
+Nilai `asal` dibaca dari satu kolom: `baris_indonesia` (BPS wilayah 9999), `pembanding` (WDI), atau `agregat` (hanya ada bila ada bobot yang sah). Kelima seri utama menerbitkan baris Indonesia, jadi tidak ada baris agregat di kasus ini (K-042).
+
+Contoh penelusuran: seri `SE.TER.ENRR`, rincian `total`, periode `1970` berasal dari `wdi/2026-10-20/data/kelompok-05-hal-01.json` dengan asal `pembanding`.

@@ -141,7 +141,8 @@ def tulis_data_dictionary(silver):
         "Ditulis ulang otomatis oleh `python pipeline.py` (`src/dokumen.py`). Tipe, rentang, dan jumlah kosong "
         "dihitung dari `data/silver/silver.parquet`.",
         "Dokumen ini mendaftarkan **setiap kolom Silver** dengan nama, tipe, satuan/format, arti, dan asal "
-        "(berkas mentah atau keputusan di `log-keputusan.csv`). Kolom Gold ditambahkan pada Sprint 2–3.",
+        "(berkas mentah atau keputusan di `log-keputusan.csv`). Dokumentasi Gold tersedia pada bagian "
+        "Data Dictionary Gold di bawah ini.",
         f"## data/silver/silver.parquet ({len(silver):,} baris)",
         "Satu baris = satu seri x wilayah x periode x rincian x berkas sumber. Kunci unik: sumber, seri_kode, "
         "wilayah_kode, periode, rincian, _berkas_raw.",
@@ -176,4 +177,8 @@ def tulis_data_dictionary(silver):
          "kode tahun + turtahun)."),
     ]
     (ROOT / "docs").mkdir(exist_ok=True)
+    # Bagian Gold ditulis tim secara statis agar tidak hilang saat kamus Silver dibuat ulang.
+    statis = ROOT / "docs" / "gold-dictionary.md"
+    if statis.exists():
+        teks.append(statis.read_text(encoding="utf-8").strip())
     (ROOT / "docs" / "data-dictionary.md").write_text("\n\n".join(teks) + "\n", encoding="utf-8")

@@ -1,6 +1,6 @@
-# Hasil validasi Silver
+# Hasil validasi Silver dan Gold
 
-Dihasilkan `python pipeline.py` (`src/validasi/`). Aturan keras menghentikan pipeline bila gagal; peringatan dilaporkan untuk diperiksa manusia. Aturan juga diuji dengan baris yang sengaja dirusak (`pytest`, berkas `tests/test_validasi.py`).
+Validasi mencakup aturan umum, aturan khusus kasus, dan pemeriksaan tambahan pada tabel Gold.
 
 | aturan | jenis | keterangan | hasil |
 |---|---|---|---|
@@ -16,6 +16,10 @@ Dihasilkan `python pipeline.py` (`src/validasi/`). Aturan keras menghentikan pip
 | umur_var2685_tidak_dijumlah | keras (kasus) | var2685 tanpa baris total (kelompok umur tumpang tindih) | LOLOS |
 | provinsi_saja | keras (kasus) | tidak ada baris kabupaten/kota | LOLOS |
 | rls_di_bawah_hls | peringatan (kasus) | RLS > HLS pada sel yang sama (peringatan) | LOLOS |
+| Struktur dan kelengkapan panel Gold | keras (Gold) | Pemeriksaan struktur dan nilai Gold | LOLOS |
+| Struktur dan rentang detail Gold | keras (Gold) | Pemeriksaan struktur dan nilai Gold | LOLOS |
+| Konsistensi catatan anomali Gold | keras (Gold) | Pemeriksaan struktur dan nilai Gold | LOLOS |
+| Tabel nasional Gold: kunci, asal, dan lineage | keras (Gold) | Pemeriksaan struktur dan nilai Gold | LOLOS |
 
 ## Kegagalan aturan umum
 
@@ -24,3 +28,13 @@ Tidak ada.
 ## Baris yang memicu aturan kasus
 
 Tidak ada.
+
+## Ringkasan Gold
+
+- Baris panel: 608
+
+- Baris detail: 1444
+
+- Baris anomali: 140
+
+- Baris tabel nasional: 172
