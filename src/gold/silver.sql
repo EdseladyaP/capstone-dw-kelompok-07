@@ -154,3 +154,18 @@ CREATE TABLE pasangan_rekonsiliasi (
     tahun VARCHAR NOT NULL,
     dugaan_kategori VARCHAR NOT NULL
 );
+
+CREATE TABLE rekonsiliasi_nasional (
+    id VARCHAR NOT NULL,
+    periode VARCHAR NOT NULL,
+    seri_utama VARCHAR NOT NULL,
+    nilai_utama DOUBLE,
+    seri_pembanding VARCHAR,
+    nilai_pembanding DOUBLE,
+    selisih DOUBLE,
+    status_pasangan VARCHAR NOT NULL,
+    kategori VARCHAR,
+    dugaan VARCHAR,
+    bukti VARCHAR,
+    PRIMARY KEY (id, periode, seri_utama)
+);

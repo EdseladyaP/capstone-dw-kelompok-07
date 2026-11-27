@@ -9,7 +9,7 @@ import re
 import pandas as pd
 
 from src import konfigurasi as K
-from src.gold import muat_sql, nasional, nasional_gold
+from src.gold import muat_sql, nasional, nasional_gold, rekonsiliasi
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -428,6 +428,7 @@ def jalankan(silver):
     # tidak bisa diulang dari pipeline. Memanggilnya di sini menyatukan reproduksi.
     hasil_nasional = nasional.jalankan(silver)
     tabel_nasional = nasional_gold.jalankan(silver)
+    hasil_rekonsiliasi = rekonsiliasi.jalankan(tabel_nasional)
 
     data_gold_sql = {
         "panel_provinsi_tahun": panel,
@@ -435,6 +436,7 @@ def jalankan(silver):
         "anomali_gold": audit_anomali,
         "audit_snapshot_gold": audit_snapshot,
         "nasional_gold": tabel_nasional,
+        "rekonsiliasi_nasional": hasil_rekonsiliasi,
     }
 
     muat_sql.jalankan(silver, data_gold_sql, hasil_nasional)
