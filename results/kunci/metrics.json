@@ -44,11 +44,12 @@
     "periode_beririsan": 9,
     "irisan_p1": 9,
     "irisan_p2": 11,
-    "baris_sql": 4216,
     "baris_nasional_gold": 172,
     "seri_nasional_gold": 6,
     "nasional_baris_indonesia": 119,
     "nasional_pembanding": 53,
+    "baris_sql": 4216,
+    "baris_sql_gold": 2538,
     "aturan_validasi": 16,
     "aturan_lolos": 16,
     "aturan_peringatan": 0,
@@ -58,5 +59,5 @@
   },
   "seed": 0,
   "data_hash": "47a36c7c376bfc28458f66b5b1370271ed253205e4c57fd7c1c748c4849a438e",
-  "perangkat": "Linux x86_64 Python 3.12.16"
+  "perangkat": "Windows AMD64 Python 3.11.4"
 }
