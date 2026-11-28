@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Tahap 2 — Profil seri pembanding SE.TER.ENRR
 
 **Kasus 07 — Partisipasi pendidikan tinggi dan lama sekolah** · Kelompok 07
@@ -137,3 +138,6 @@ definisi populasi**.
 - Perbandingan gender tertunda sampai ada seri utama dengan rincian jenis kelamin.
 - Perlu konfirmasi anggota **Integrasi/Penyimpanan (Tahap 6)** apakah `var1443` wilayah `9999`
   yang dipakai sebagai titik banding nasional, dan apakah perlu penyeragaman satuan/definisi.
+=======
+
+>>>>>>> 2d5c5fc (docs: update markdown task)
