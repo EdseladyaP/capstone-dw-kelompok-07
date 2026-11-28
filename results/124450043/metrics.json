@@ -1,5 +1,13 @@
 {
   "metrik": {
+    "jumlah_berkas_manifest": 15,
+    "seri_diprofil": 8,
+    "baris_tabel_ringkasan": 15,
+    "baris_tabel_periode": 281,
+    "kandidat_sebanding": 1,
+    "rincian_tidak_sebanding": 11,
+    "tahun_irisan_nasional": 9,
+    "periode_hilang_pembanding": 41,
     "aturan_validasi": 12,
     "aturan_lolos": 12,
     "aturan_peringatan": 0,
